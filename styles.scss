@@ -1,0 +1,22 @@
+// TIPOGRAFIAS
+
+$font-family-primary: 'Montserrat', sans-serif;
+$font-family-secondary: 'Arvo', serif;
+
+.text-montserrat {
+    font-family: $font-family-primary;
+}
+
+.text-arvo {
+    font-family: $font-family-secondary;
+}
+
+// COLORES
+
+$primary: #6A6A6A;
+$secondary: #F37A21; 
+$success: #F9F9F9;
+
+body {
+    background-color: $secondary;
+}
