@@ -331,6 +331,10 @@ ul {
   overflow-x: hidden;
 }
 
+.titulos-servicios {
+  font-size: 3rem;
+}
+
 .planeamiento, .reporting, .staffing {
   background-color: #F9F9F9;
 }
@@ -345,6 +349,10 @@ ul {
   transition: all 1s ease-in-out 0s;
   opacity: 1;
   visibility: visible;
+}
+
+.card-direccion {
+  text-align: end;
 }
 
 .iconos-servicios {
@@ -375,6 +383,11 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.open-btn > svg {
+  width: 41;
+  height: 41;
 }
 
 .open-btn,
@@ -617,7 +630,6 @@ a:hover {
     background: linear-gradient(0deg, #6a6a6a 0%, white 100%);
   }
   .hero-tittle > h5 {
-    text-shadow: none;
     line-height: 1.5;
   }
   .nav-overlay {
@@ -629,8 +641,8 @@ a:hover {
     left: 0;
     background-color: #6A6A6A;
     overflow: hidden;
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
   .nav-overlay > ul {
     top: 10%;
@@ -688,48 +700,57 @@ a:hover {
     width: 75%;
     background-color: rgba(255, 255, 255, 0.838);
     top: 25%;
-    right: 100%;
-    -webkit-animation: textos-filo1 0.5s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
-            animation: textos-filo1 0.5s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
+    left: 10%;
+    -webkit-animation: textos-filo1 1s ease-in-out calc(var(--scroll) * -1.2s) forwards paused;
+            animation: textos-filo1 1s ease-in-out calc(var(--scroll) * -1.2s) forwards paused;
   }
   @-webkit-keyframes textos-filo1 {
     to {
-      left: -10%;
+      left: 40%;
     }
   }
   @keyframes textos-filo1 {
     to {
-      left: -10%;
+      left: 40%;
     }
   }
   .texto-filosofia2 {
     background-color: rgba(255, 255, 255, 0.838);
     bottom: 10%;
-    left: -80%;
+    right: 10%;
     width: 75%;
-    -webkit-animation: textos-filo2 0.7s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
-            animation: textos-filo2 0.7s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
+    -webkit-animation: textos-filo2 1s ease-in-out calc(var(--scroll) * -1.2s) forwards paused;
+            animation: textos-filo2 1s ease-in-out calc(var(--scroll) * -1.2s) forwards paused;
   }
   @-webkit-keyframes textos-filo2 {
     to {
-      left: 100%;
+      right: 40%;
     }
   }
   @keyframes textos-filo2 {
     to {
-      left: 100%;
+      right: 40%;
     }
   }
+  .card-direccion {
+    text-align: center;
+  }
   .iconos-servicios {
-    width: 50px;
+    width: 65px;
+  }
+  .titulos-servicios {
+    font-size: 3rem;
   }
   .planeamiento, .direccion, .reporting, .procesosIT, .staffing {
     height: 80vh;
     -webkit-transition: all .5s ease-in-out 0s;
     transition: all .5s ease-in-out 0s;
   }
+  .planeamiento, .reporting, .staffing {
+    text-align: center;
+  }
   .text-servicios {
-    font-size: .8rem;
+    font-size: 1rem;
   }
   .overlay,
   .overlay-2,
@@ -743,17 +764,21 @@ a:hover {
   .text-servicios-mob {
     font-size: .8rem;
   }
+  .open-btn > svg {
+    width: 35;
+    height: 35;
+  }
   .close-btn > svg {
     width: 35;
     height: 35;
   }
   .titulo-overlay {
     text-align: center;
-    font-size: 2rem;
-    line-height: 1;
+    font-size: 2.5rem;
+    line-height: .9;
   }
   .textos-overlay > li {
-    font-size: .8rem !important;
+    font-size: .9rem !important;
   }
   .close-btn {
     position: absolute;
@@ -779,34 +804,34 @@ a:hover {
   .texto-equipo1 {
     top: 25%;
     bottom: unset;
-    left: 100%;
-    -webkit-animation: textos-equipo1 1.3s ease-in-out calc(var(--scroll) * -1.3s) forwards paused;
-            animation: textos-equipo1 1.3s ease-in-out calc(var(--scroll) * -1.3s) forwards paused;
+    left: -100%;
+    -webkit-animation: textos-equipo1 1s ease-in-out calc(var(--scroll) * -1s) forwards paused;
+            animation: textos-equipo1 1s ease-in-out calc(var(--scroll) * -1s) forwards paused;
   }
   .texto-equipo2 {
     bottom: 30%;
-    right: 100%;
-    -webkit-animation: textos-equipo2 1.3s ease-in-out calc(var(--scroll) * -1.3s) forwards paused;
-            animation: textos-equipo2 1.3s ease-in-out calc(var(--scroll) * -1.3s) forwards paused;
+    right: -100%;
+    -webkit-animation: textos-equipo2 1s ease-in-out calc(var(--scroll) * -1s) forwards paused;
+            animation: textos-equipo2 1s ease-in-out calc(var(--scroll) * -1s) forwards paused;
   }
   @-webkit-keyframes textos-equipo1 {
     to {
-      left: -10%;
+      left: 30%;
     }
   }
   @keyframes textos-equipo1 {
     to {
-      left: -10%;
+      left: 30%;
     }
   }
   @-webkit-keyframes textos-equipo2 {
     to {
-      right: -10%;
+      right: 30%;
     }
   }
   @keyframes textos-equipo2 {
     to {
-      right: -10%;
+      right: 30%;
     }
   }
   .contacto {

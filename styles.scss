@@ -291,6 +291,10 @@ ul {
     overflow-x: hidden;
 }
 
+.titulos-servicios {
+    font-size: 3rem;
+}
+
 .planeamiento, .reporting, .staffing {
     background-color: $success;
 }
@@ -304,6 +308,10 @@ ul {
     transition: all 1s ease-in-out 0s;
     opacity: 1;
     visibility: visible;
+}
+
+.card-direccion {
+    text-align: end;
 }
 
 .iconos-servicios {
@@ -329,6 +337,11 @@ ul {
 
 .open-btn {
     align-items: center;
+}
+
+.open-btn > svg {
+    width: 41;
+    height: 41;
 }
 
 .open-btn, 
@@ -535,7 +548,7 @@ a:hover {
     }
 
     .hero-tittle > h5 {
-        text-shadow: none;
+        // text-shadow: none;
         line-height: 1.5;
     }
 
@@ -548,7 +561,7 @@ a:hover {
         left: 0;
         background-color: $primary;
         overflow: hidden;
-        transition: 0.5s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
 
     .nav-overlay > ul {
@@ -611,31 +624,39 @@ a:hover {
         width: 75%;
         background-color: rgba(255, 255, 255, 0.838);
         top: 25%;
-        right: 100%;
-        animation: textos-filo1 .5s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
+        left: 10%;
+        animation: textos-filo1 1s ease-in-out calc(var(--scroll) * -1.2s) forwards paused;
     }
     @keyframes textos-filo1 {
         to {
-            left: -10%;
+            left: 40%;
         }
     }
     
     .texto-filosofia2 {
         background-color: rgba(255, 255, 255, 0.838);
         bottom: 10%;
-        left: -80%;
+        right: 10%;
         width: 75%;
-        animation: textos-filo2 .7s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
+        animation: textos-filo2 1s ease-in-out calc(var(--scroll) * -1.2s) forwards paused;
     }
     
     @keyframes textos-filo2 {
         to {
-            left: 100%;
+            right: 40%;
         }
     }
 
+    .card-direccion {
+        text-align: center;
+    }
+
     .iconos-servicios {
-        width: 50px;
+        width: 65px;
+    }
+
+    .titulos-servicios {
+        font-size: 3rem;
     }
 
     .planeamiento, .direccion, .reporting, .procesosIT, .staffing {
@@ -643,8 +664,12 @@ a:hover {
         transition: all .5s ease-in-out 0s;
     }
 
+    .planeamiento, .reporting, .staffing {
+        text-align: center;
+    }
+
     .text-servicios {
-        font-size: .8rem;
+        font-size: 1rem;
     }   
 
     .overlay,
@@ -660,6 +685,11 @@ a:hover {
         font-size: .8rem;
     }
 
+    .open-btn > svg {
+        width: 35;
+        height: 35;
+    }
+
     .close-btn > svg {
         width: 35;
         height: 35;
@@ -667,12 +697,12 @@ a:hover {
 
     .titulo-overlay {
         text-align: center;
-        font-size: 2rem;
-        line-height: 1;
+        font-size: 2.5rem;
+        line-height: .9;
     }
 
     .textos-overlay > li{
-        font-size: .8rem !important;
+        font-size: .9rem !important;
     }
 
     .close-btn {
@@ -706,23 +736,23 @@ a:hover {
     .texto-equipo1 {
         top: 25%;
         bottom: unset;
-        left: 100%;
-        animation: textos-equipo1 1.3s ease-in-out calc(var(--scroll) * -1.3s) forwards paused;
+        left: -100%;
+        animation: textos-equipo1 1s ease-in-out calc(var(--scroll) * -1s) forwards paused;
     }
     .texto-equipo2 {
         bottom: 30%;
-        right: 100%;
-        animation: textos-equipo2 1.3s ease-in-out calc(var(--scroll) * -1.3s) forwards paused;
+        right: -100%;
+        animation: textos-equipo2 1s ease-in-out calc(var(--scroll) * -1s) forwards paused;
     }
     
     @keyframes textos-equipo1 {
         to {
-            left: -10%;
+            left: 30%;
         }
     }
     @keyframes textos-equipo2 {
         to {
-            right: -10%;
+            right: 30%;
         }
     }
 
