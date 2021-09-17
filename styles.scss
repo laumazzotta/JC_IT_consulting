@@ -2,21 +2,792 @@
 
 $font-family-primary: 'Montserrat', sans-serif;
 $font-family-secondary: 'Arvo', serif;
+$font-family-terciary: 'Roboto', sans-serif;
+
+:root {
+    --scroll: 0;
+}
 
 .text-montserrat {
     font-family: $font-family-primary;
+}
+.text-montserrat-SC {
+    font-family: $font-family-primary;
+    font-variant: small-caps;
 }
 
 .text-arvo {
     font-family: $font-family-secondary;
 }
 
+.text-roboto {
+    font-family: $font-family-terciary;
+}
+
+
 // COLORES
 
 $primary: #6A6A6A;
 $secondary: #F37A21; 
 $success: #F9F9F9;
+$info: #C4C4C4;
 
-body {
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info
+);
+
+.dark-grey {
+    color: $primary;
+}
+
+.orange {
+    color: $secondary;
+}
+
+.light-grey {
+    color: $success;
+}
+
+.medium-grey {
+    color: $info;
+}
+
+.white {
+    color: white;
+}
+
+.bg-mdgray {
+    background-color: $success;
+}
+
+.bg-orange {
     background-color: $secondary;
+}
+
+.vh-50 {
+    height: 50vh;
+}
+
+.hero-background {
+    background-image: url(images/bg_home.png);
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+#main-logo {
+    width: 400;
+}
+
+.nav-link {
+    color: $success;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-link:hover {
+    color: $secondary !important;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-nav > li > a {
+    cursor: pointer;
+    width: fit-content;
+    position: relative;
+    display: block;
+    bottom: 0;
+    left: 0;
+}
+
+.navbar-nav > li > a:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 10px;
+    left: 0;
+    background-color: $secondary;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-nav > li > a:hover:before{
+    opacity: 1;
+    transform: scaleX(.9);
+}
+
+ul {
+    list-style: none;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    background-color: #C4C4C4;
+    transition: all 0.3s ease-in-out 0s;
+    text-align: start;
+    z-index: 1000;
+    width: 24rem;
+}
+
+.dropdown-link {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.dropdown-link:hover > .submenu {
+    display: block;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.dropdown-link > svg {
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.dropdown-link:hover > svg {
+    color: $secondary;
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.dropdown-link:hover > a {
+    color: $secondary;
+}
+
+.submenu:hover {
+    display: block;
+}
+
+.dropdown-item {
+    clear: both;
+    width: 100%;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.dropdown-item:hover {
+    color: $secondary;
+}
+
+.hero-tittle > h5 {
+    text-shadow: 1px 2px 2px #0000009e;
+    line-height: 1.5;
+}
+
+.hero-cta > a > p {
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+
+.hero-cta> a > svg {
+    animation: hero-cta 1.3s linear infinite alternate forwards;
+}
+
+@keyframes hero-cta {
+    to {
+        transform: scale3d(1.3, 1.2, 1.3);
+    }
+}
+
+.hero-cta> a > svg, 
+.hero-cta > a > svg > g > path,
+.hero-cta > a > p {
+    transition: all 0.3s ease-in-out 0s;
+}   
+
+.hero-cta:hover > a > p {
+    color: $secondary;
+}
+
+.items-qs-first, .items-qs-second, .items-qs-third {
+    animation: slide-items;
+    animation-duration: .3s;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+}
+
+.items-qs-first {
+    animation-delay: calc(var(--scroll) * -1.5s);
+}
+
+.items-qs-second {
+    animation-delay: calc(var(--scroll) * -1.4s);
+}
+
+.items-qs-third {
+    animation-delay: calc(var(--scroll) * -1.3s);
+}
+
+@keyframes slide-items {
+    0% {
+        transform: translate3d(0, 100%, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+#filosofia {
+    background-image: url(images/bg_filosofia.png);
+    height: 100%;
+    // background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;   
+}
+
+#filosofia > h1 {
+    font-size: 9rem;
+    top: 13%;
+    text-shadow: 2px 3px 10px #00000074;
+}
+
+.texto-filosofia1 {
+    width: 25%;
+    background-color: rgba(255, 255, 255, 0.838);
+    top: 10%;
+    left: 100%;
+    animation: textos-filo1 .5s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
+}
+@keyframes textos-filo1 {
+    to {
+        left: 43%;
+    }
+}
+
+.texto-filosofia2 {
+    background-color: rgba(255, 255, 255, 0.838);
+    bottom: 10%;
+    right: -50%;
+    width: 30%;
+    animation: textos-filo2 .5s ease-in-out calc(var(--scroll) * -1.6s) forwards paused;
+}
+
+@keyframes textos-filo2 {
+    to {
+        right: 4%;
+    }
+}
+
+.servicios > h1, .contacto {
+    font-size: 7rem;   
+    padding-top: 3rem;
+    letter-spacing: 1rem;
+}
+
+.items-servicios {
+    overflow-x: hidden;
+}
+
+.planeamiento, .reporting, .staffing {
+    background-color: $success;
+}
+
+.direccion, .procesosIT {
+    background-color: white;
+}
+
+.planeamiento, .direccion, .reporting, .procesosIT, .staffing {
+    height: 50vh;
+    transition: all 1s ease-in-out 0s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.iconos-servicios {
+    width: 80px;
+}
+
+.planeamiento > div > .open-btn > svg, 
+.reporting > div > .open-btn > svg,
+.staffing > div > .open-btn > svg {
+    transform: rotate(-90deg);
+}
+
+.direccion > div > .open-btn > svg,
+.procesosIT > div > .open-btn > svg {
+    transform: rotate(90deg);
+}
+
+.planeamiento > div > h4 
+.reporting > div > h4,
+.reporting > div > h4 {
+    transition: all .7s ease-in-out 0s;
+}
+
+.open-btn {
+    align-items: center;
+}
+
+.open-btn, 
+.open-btn > p, 
+.open-btn > svg > g > path {
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.open-btn:hover, 
+.close-btn:hover {
+    color: rgb(194, 83, 3);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.open-btn:hover > svg > g > path,
+.close-btn:hover > svg > g > path {
+    fill: rgb(194, 83, 3);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.open-btn > p, 
+.open-btn > svg > g > path {
+    transition: all .3s ease-in-out 0s;
+} 
+
+.overlay,
+.overlay-3, 
+.overlay-5 {
+    // width: 50%;
+    height: 50vh;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    background-color: $info;
+}
+
+.overlay-open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(0) !important;
+}
+.planeamiento-open {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+}
+
+.direccion-open {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+}
+
+.close-btn {
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.close-btn > svg {
+    width: 41;
+    height: 41;
+}
+
+.overlay-2 > .close-btn, 
+.overlay-4 > .close-btn {
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+.overlay-2, 
+.overlay-4 {
+    // width: 50%;
+    height: 50vh;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transform: translateX(-100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    background-color: $info;
+}
+
+#equipo {
+    background-image: url(images/bg_equipo.png);
+    height: 120%;
+    // background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;  
+    overflow-x: hidden; 
+}
+
+#equipo > h1 {
+    font-size: 7rem;
+    text-shadow: 2px 3px 10px #00000074;   
+}
+
+.texto-equipo1, .texto-equipo2 {
+    background-color: rgba(255, 255, 255, 0.838);
+    width: 30%;
+    opacity: 0;
+}
+
+.texto-equipo1 {
+    bottom: 25%;
+    left: -100%;
+    animation: textos-equipo1 .5s ease-in-out calc(var(--scroll) * -0.5s) forwards paused;
+}
+.texto-equipo2 {
+    bottom: 20%;
+    right: -100%;
+    animation: textos-equipo2 .5s ease-in-out calc(var(--scroll) * -0.5s) forwards paused;
+}
+
+@keyframes textos-equipo1 {
+    to {
+        left: 15%;
+        opacity: 1;
+    }
+}
+@keyframes textos-equipo2 {
+    to {
+        right: 15%;
+        opacity: 1;
+    }
+}
+
+#contacto {
+    overflow-x: hidden;
+}
+
+#contacto > div > div,
+.formulario {
+    width: 40%;
+}
+
+.formulario > input, textarea, 
+.formulario > button {
+    margin: .5rem 0rem;
+    border: none;
+    box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.formulario > button {
+    width: fit-content;
+}
+
+.formulario > button:hover {
+    background-color: $primary;
+    color: $success;
+    transform: scale3d(1.1, 1.1, 1.1);
+    box-shadow: 2px 11px 35px -12px #000;
+    transition: all 0.3s ease-in-out 0s;   
+}
+
+a {
+    transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover {
+    color: $secondary;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#footer {
+    background-image: url(images/bg_footer.png);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;     
+}
+
+#footer >div {
+    width: fit-content;
+}
+
+.logo-footer {
+    width: 160;
+}
+
+// MOBILE ------------------------------------------
+
+@media only screen and (max-width: 992px) {
+    
+    #main-logo {
+        width: 250;
+    }      
+
+    .hero-background {
+        background: rgb(106,106,106);
+        background: linear-gradient(0deg, rgba(106,106,106,1) 0%, rgba(255,255,255,1) 100%);
+    }
+
+    .hero-tittle > h5 {
+        text-shadow: none;
+        line-height: 1.5;
+    }
+
+    .nav-overlay {
+        height: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 10000;
+        top: 0;
+        left: 0;
+        background-color: $primary;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+    }
+
+    .nav-overlay > ul {
+        top: 10%;
+    }
+
+    #closeNav {
+        z-index: 10000;
+    }
+
+    .submenu {
+        right: 0;
+        left: unset;
+        text-align: end;
+        width: 100vw;
+    }
+
+    #quienesSomos { 
+        height: auto !important;
+    }
+
+    .servicios > h1, .contacto {
+        font-size: 3rem;   
+        padding-top: 3rem;
+        letter-spacing: .5rem;
+    }
+
+    .items-qs-first, .items-qs-second, .items-qs-third {
+        animation: slide-items;
+        animation-duration: .2s;
+        animation-play-state: paused;
+        animation-fill-mode: forwards;
+    }
+    
+    .items-qs-first {
+        animation-delay: calc(var(--scroll) * -1.8s);
+    }
+    
+    .items-qs-second {
+        animation-delay: calc(var(--scroll) * -1.9s);
+    }
+    
+    .items-qs-third {
+        animation-delay: calc(var(--scroll) * -2s);
+    }
+
+    #filosofia {
+        background-image: url(images/bg_filosofia_mobile.png);
+        height: 110%;
+    }
+    
+    #filosofia > h1 {
+        font-size: 3rem;
+        top: 8%;
+        text-shadow: 2px 3px 10px #00000074;
+        letter-spacing: .5rem;
+    }
+    
+    .texto-filosofia1 {
+        width: 75%;
+        background-color: rgba(255, 255, 255, 0.838);
+        top: 25%;
+        right: 100%;
+        animation: textos-filo1 .5s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
+    }
+    @keyframes textos-filo1 {
+        to {
+            left: -10%;
+        }
+    }
+    
+    .texto-filosofia2 {
+        background-color: rgba(255, 255, 255, 0.838);
+        bottom: 10%;
+        left: -80%;
+        width: 75%;
+        animation: textos-filo2 .7s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
+    }
+    
+    @keyframes textos-filo2 {
+        to {
+            left: 100%;
+        }
+    }
+
+    .iconos-servicios {
+        width: 50px;
+    }
+
+    .planeamiento, .direccion, .reporting, .procesosIT, .staffing {
+        height: 80vh;
+        transition: all .5s ease-in-out 0s;
+    }
+
+    .text-servicios {
+        font-size: .8rem;
+    }   
+
+    .overlay,
+    .overlay-2,
+    .overlay-3,
+    .overlay-4,
+    .overlay-5 {
+        height: 80vh;
+        transition: .5s ease-in-out;
+    }
+
+    .text-servicios-mob {
+        font-size: .8rem;
+    }
+
+    .close-btn > svg {
+        width: 35;
+        height: 35;
+    }
+
+    .titulo-overlay {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .textos-overlay > li{
+        font-size: .8rem !important;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 4%;
+        padding: 0;
+    }
+
+    .overlay-2 > .close-btn, 
+    .overlay-4 > .close-btn {
+        right: 2%;
+    }
+
+    #equipo > h1 {
+        font-size: 2.5rem;
+        letter-spacing: 1.5;
+
+    }
+    
+    #equipo {
+        background-image: url(images/bg_equipo_mobile.png);
+        
+    }
+    
+    .texto-equipo1, .texto-equipo2 {
+        font-size: .8rem;
+        width: 75%;
+        opacity: 1;
+    }
+    
+    .texto-equipo1 {
+        top: 25%;
+        bottom: unset;
+        left: 100%;
+        animation: textos-equipo1 1.3s ease-in-out calc(var(--scroll) * -1.3s) forwards paused;
+    }
+    .texto-equipo2 {
+        bottom: 30%;
+        right: 100%;
+        animation: textos-equipo2 1.3s ease-in-out calc(var(--scroll) * -1.3s) forwards paused;
+    }
+    
+    @keyframes textos-equipo1 {
+        to {
+            left: -10%;
+        }
+    }
+    @keyframes textos-equipo2 {
+        to {
+            right: -10%;
+        }
+    }
+
+    .contacto {
+        font-size: 3rem;   
+        padding-top: 3rem;
+        letter-spacing: .3rem;
+    }
+
+    #contacto > div > div,
+    .formulario {
+        width: 90%;
+    }
+
+    .logo-footer {
+        width: 100;
+        margin-top: 2rem;
+    }
+
+    #footer >div {
+        border-bottom: none !important;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+    .texto-filosofia1 {
+        font-size: .8rem;
+        top: 30%;
+    }
+
+    .texto-filosofia2 {
+        font-size: .8rem;
+        bottom: 15%;
+    }
+
+    .texto-equipo2 {
+        bottom: 20%;
+    }
+
+}
+
+@media only screen and (max-width: 321px) {
+
+    #filosofia {
+        height: 120%;
+    }
+
+    #filosofia > h1, 
+    .servicios > h1, .contacto {
+        font-size: 2.5rem;
+        letter-spacing: 1.5;
+    }
+
+    .texto-filosofia1 {
+        top: 25%;
+    }
+
+    .texto-filosofia2 {
+        bottom: 10%;
+    }
+
+    .texto-equipo2 {
+        bottom: 15%;
+    }
+
 }

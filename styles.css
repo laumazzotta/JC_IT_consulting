@@ -1,12 +1,863 @@
+:root {
+  --scroll: 0;
+}
+
 .text-montserrat {
   font-family: "Montserrat", sans-serif;
+}
+
+.text-montserrat-SC {
+  font-family: "Montserrat", sans-serif;
+  font-variant: small-caps;
 }
 
 .text-arvo {
   font-family: "Arvo", serif;
 }
 
-body {
+.text-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.dark-grey {
+  color: #6A6A6A;
+}
+
+.orange {
+  color: #F37A21;
+}
+
+.light-grey {
+  color: #F9F9F9;
+}
+
+.medium-grey {
+  color: #C4C4C4;
+}
+
+.white {
+  color: white;
+}
+
+.bg-mdgray {
+  background-color: #F9F9F9;
+}
+
+.bg-orange {
   background-color: #F37A21;
+}
+
+.vh-50 {
+  height: 50vh;
+}
+
+.hero-background {
+  background-image: url(images/bg_home.png);
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+#main-logo {
+  width: 400;
+}
+
+.nav-link {
+  color: #F9F9F9;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-link:hover {
+  color: #F37A21 !important;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-nav > li > a {
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  display: block;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar-nav > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 10px;
+  left: 0;
+  background-color: #F37A21;
+  opacity: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-nav > li > a:hover:before {
+  opacity: 1;
+  -webkit-transform: scaleX(0.9);
+          transform: scaleX(0.9);
+}
+
+ul {
+  list-style: none;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  background-color: #C4C4C4;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  text-align: start;
+  z-index: 1000;
+  width: 24rem;
+}
+
+.dropdown-link {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.dropdown-link:hover > .submenu {
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.dropdown-link > svg {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.dropdown-link:hover > svg {
+  color: #F37A21;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.dropdown-link:hover > a {
+  color: #F37A21;
+}
+
+.submenu:hover {
+  display: block;
+}
+
+.dropdown-item {
+  clear: both;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.dropdown-item:hover {
+  color: #F37A21;
+}
+
+.hero-tittle > h5 {
+  text-shadow: 1px 2px 2px #0000009e;
+  line-height: 1.5;
+}
+
+.hero-cta > a > p {
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+.hero-cta > a > svg {
+  -webkit-animation: hero-cta 1.3s linear infinite alternate forwards;
+          animation: hero-cta 1.3s linear infinite alternate forwards;
+}
+
+@-webkit-keyframes hero-cta {
+  to {
+    -webkit-transform: scale3d(1.3, 1.2, 1.3);
+            transform: scale3d(1.3, 1.2, 1.3);
+  }
+}
+
+@keyframes hero-cta {
+  to {
+    -webkit-transform: scale3d(1.3, 1.2, 1.3);
+            transform: scale3d(1.3, 1.2, 1.3);
+  }
+}
+
+.hero-cta > a > svg,
+.hero-cta > a > svg > g > path,
+.hero-cta > a > p {
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.hero-cta:hover > a > p {
+  color: #F37A21;
+}
+
+.items-qs-first, .items-qs-second, .items-qs-third {
+  -webkit-animation: slide-items;
+          animation: slide-items;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.items-qs-first {
+  -webkit-animation-delay: calc(var(--scroll) * -1.5s);
+          animation-delay: calc(var(--scroll) * -1.5s);
+}
+
+.items-qs-second {
+  -webkit-animation-delay: calc(var(--scroll) * -1.4s);
+          animation-delay: calc(var(--scroll) * -1.4s);
+}
+
+.items-qs-third {
+  -webkit-animation-delay: calc(var(--scroll) * -1.3s);
+          animation-delay: calc(var(--scroll) * -1.3s);
+}
+
+@-webkit-keyframes slide-items {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-items {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+#filosofia {
+  background-image: url(images/bg_filosofia.png);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+#filosofia > h1 {
+  font-size: 9rem;
+  top: 13%;
+  text-shadow: 2px 3px 10px #00000074;
+}
+
+.texto-filosofia1 {
+  width: 25%;
+  background-color: rgba(255, 255, 255, 0.838);
+  top: 10%;
+  left: 100%;
+  -webkit-animation: textos-filo1 0.5s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
+          animation: textos-filo1 0.5s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
+}
+
+@-webkit-keyframes textos-filo1 {
+  to {
+    left: 43%;
+  }
+}
+
+@keyframes textos-filo1 {
+  to {
+    left: 43%;
+  }
+}
+
+.texto-filosofia2 {
+  background-color: rgba(255, 255, 255, 0.838);
+  bottom: 10%;
+  right: -50%;
+  width: 30%;
+  -webkit-animation: textos-filo2 0.5s ease-in-out calc(var(--scroll) * -1.6s) forwards paused;
+          animation: textos-filo2 0.5s ease-in-out calc(var(--scroll) * -1.6s) forwards paused;
+}
+
+@-webkit-keyframes textos-filo2 {
+  to {
+    right: 4%;
+  }
+}
+
+@keyframes textos-filo2 {
+  to {
+    right: 4%;
+  }
+}
+
+.servicios > h1, .contacto {
+  font-size: 7rem;
+  padding-top: 3rem;
+  letter-spacing: 1rem;
+}
+
+.items-servicios {
+  overflow-x: hidden;
+}
+
+.planeamiento, .reporting, .staffing {
+  background-color: #F9F9F9;
+}
+
+.direccion, .procesosIT {
+  background-color: white;
+}
+
+.planeamiento, .direccion, .reporting, .procesosIT, .staffing {
+  height: 50vh;
+  -webkit-transition: all 1s ease-in-out 0s;
+  transition: all 1s ease-in-out 0s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.iconos-servicios {
+  width: 80px;
+}
+
+.planeamiento > div > .open-btn > svg,
+.reporting > div > .open-btn > svg,
+.staffing > div > .open-btn > svg {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.direccion > div > .open-btn > svg,
+.procesosIT > div > .open-btn > svg {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.planeamiento > div > h4
+.reporting > div > h4,
+.reporting > div > h4 {
+  -webkit-transition: all .7s ease-in-out 0s;
+  transition: all .7s ease-in-out 0s;
+}
+
+.open-btn {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.open-btn,
+.open-btn > p,
+.open-btn > svg > g > path {
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.open-btn:hover,
+.close-btn:hover {
+  color: #c25303;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.open-btn:hover > svg > g > path,
+.close-btn:hover > svg > g > path {
+  fill: #c25303;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.open-btn > p,
+.open-btn > svg > g > path {
+  -webkit-transition: all .3s ease-in-out 0s;
+  transition: all .3s ease-in-out 0s;
+}
+
+.overlay,
+.overlay-3,
+.overlay-5 {
+  height: 50vh;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  background-color: #C4C4C4;
+}
+
+.overlay-open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+}
+
+.planeamiento-open {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.direccion-open {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.close-btn {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.close-btn > svg {
+  width: 41;
+  height: 41;
+}
+
+.overlay-2 > .close-btn,
+.overlay-4 > .close-btn {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  cursor: pointer;
+}
+
+.overlay-2,
+.overlay-4 {
+  height: 50vh;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  background-color: #C4C4C4;
+}
+
+#equipo {
+  background-image: url(images/bg_equipo.png);
+  height: 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#equipo > h1 {
+  font-size: 7rem;
+  text-shadow: 2px 3px 10px #00000074;
+}
+
+.texto-equipo1, .texto-equipo2 {
+  background-color: rgba(255, 255, 255, 0.838);
+  width: 30%;
+  opacity: 0;
+}
+
+.texto-equipo1 {
+  bottom: 25%;
+  left: -100%;
+  -webkit-animation: textos-equipo1 0.5s ease-in-out calc(var(--scroll) * -0.5s) forwards paused;
+          animation: textos-equipo1 0.5s ease-in-out calc(var(--scroll) * -0.5s) forwards paused;
+}
+
+.texto-equipo2 {
+  bottom: 20%;
+  right: -100%;
+  -webkit-animation: textos-equipo2 0.5s ease-in-out calc(var(--scroll) * -0.5s) forwards paused;
+          animation: textos-equipo2 0.5s ease-in-out calc(var(--scroll) * -0.5s) forwards paused;
+}
+
+@-webkit-keyframes textos-equipo1 {
+  to {
+    left: 15%;
+    opacity: 1;
+  }
+}
+
+@keyframes textos-equipo1 {
+  to {
+    left: 15%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes textos-equipo2 {
+  to {
+    right: 15%;
+    opacity: 1;
+  }
+}
+
+@keyframes textos-equipo2 {
+  to {
+    right: 15%;
+    opacity: 1;
+  }
+}
+
+#contacto {
+  overflow-x: hidden;
+}
+
+#contacto > div > div,
+.formulario {
+  width: 40%;
+}
+
+.formulario > input, textarea,
+.formulario > button {
+  margin: .5rem 0rem;
+  border: none;
+  -webkit-box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.08);
+          box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.formulario > button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.formulario > button:hover {
+  background-color: #6A6A6A;
+  color: #F9F9F9;
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+          transform: scale3d(1.1, 1.1, 1.1);
+  -webkit-box-shadow: 2px 11px 35px -12px #000;
+          box-shadow: 2px 11px 35px -12px #000;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a {
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover {
+  color: #F37A21;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#footer {
+  background-image: url(images/bg_footer.png);
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+#footer > div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.logo-footer {
+  width: 160;
+}
+
+@media only screen and (max-width: 992px) {
+  #main-logo {
+    width: 250;
+  }
+  .hero-background {
+    background: #6a6a6a;
+    background: -webkit-gradient(linear, left bottom, left top, from(#6a6a6a), to(white));
+    background: linear-gradient(0deg, #6a6a6a 0%, white 100%);
+  }
+  .hero-tittle > h5 {
+    text-shadow: none;
+    line-height: 1.5;
+  }
+  .nav-overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    background-color: #6A6A6A;
+    overflow: hidden;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  .nav-overlay > ul {
+    top: 10%;
+  }
+  #closeNav {
+    z-index: 10000;
+  }
+  .submenu {
+    right: 0;
+    left: unset;
+    text-align: end;
+    width: 100vw;
+  }
+  #quienesSomos {
+    height: auto !important;
+  }
+  .servicios > h1, .contacto {
+    font-size: 3rem;
+    padding-top: 3rem;
+    letter-spacing: .5rem;
+  }
+  .items-qs-first, .items-qs-second, .items-qs-third {
+    -webkit-animation: slide-items;
+            animation: slide-items;
+    -webkit-animation-duration: .2s;
+            animation-duration: .2s;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .items-qs-first {
+    -webkit-animation-delay: calc(var(--scroll) * -1.8s);
+            animation-delay: calc(var(--scroll) * -1.8s);
+  }
+  .items-qs-second {
+    -webkit-animation-delay: calc(var(--scroll) * -1.9s);
+            animation-delay: calc(var(--scroll) * -1.9s);
+  }
+  .items-qs-third {
+    -webkit-animation-delay: calc(var(--scroll) * -2s);
+            animation-delay: calc(var(--scroll) * -2s);
+  }
+  #filosofia {
+    background-image: url(images/bg_filosofia_mobile.png);
+    height: 110%;
+  }
+  #filosofia > h1 {
+    font-size: 3rem;
+    top: 8%;
+    text-shadow: 2px 3px 10px #00000074;
+    letter-spacing: .5rem;
+  }
+  .texto-filosofia1 {
+    width: 75%;
+    background-color: rgba(255, 255, 255, 0.838);
+    top: 25%;
+    right: 100%;
+    -webkit-animation: textos-filo1 0.5s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
+            animation: textos-filo1 0.5s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
+  }
+  @-webkit-keyframes textos-filo1 {
+    to {
+      left: -10%;
+    }
+  }
+  @keyframes textos-filo1 {
+    to {
+      left: -10%;
+    }
+  }
+  .texto-filosofia2 {
+    background-color: rgba(255, 255, 255, 0.838);
+    bottom: 10%;
+    left: -80%;
+    width: 75%;
+    -webkit-animation: textos-filo2 0.7s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
+            animation: textos-filo2 0.7s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
+  }
+  @-webkit-keyframes textos-filo2 {
+    to {
+      left: 100%;
+    }
+  }
+  @keyframes textos-filo2 {
+    to {
+      left: 100%;
+    }
+  }
+  .iconos-servicios {
+    width: 50px;
+  }
+  .planeamiento, .direccion, .reporting, .procesosIT, .staffing {
+    height: 80vh;
+    -webkit-transition: all .5s ease-in-out 0s;
+    transition: all .5s ease-in-out 0s;
+  }
+  .text-servicios {
+    font-size: .8rem;
+  }
+  .overlay,
+  .overlay-2,
+  .overlay-3,
+  .overlay-4,
+  .overlay-5 {
+    height: 80vh;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+  .text-servicios-mob {
+    font-size: .8rem;
+  }
+  .close-btn > svg {
+    width: 35;
+    height: 35;
+  }
+  .titulo-overlay {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .textos-overlay > li {
+    font-size: .8rem !important;
+  }
+  .close-btn {
+    position: absolute;
+    top: 4%;
+    padding: 0;
+  }
+  .overlay-2 > .close-btn,
+  .overlay-4 > .close-btn {
+    right: 2%;
+  }
+  #equipo > h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1.5;
+  }
+  #equipo {
+    background-image: url(images/bg_equipo_mobile.png);
+  }
+  .texto-equipo1, .texto-equipo2 {
+    font-size: .8rem;
+    width: 75%;
+    opacity: 1;
+  }
+  .texto-equipo1 {
+    top: 25%;
+    bottom: unset;
+    left: 100%;
+    -webkit-animation: textos-equipo1 1.3s ease-in-out calc(var(--scroll) * -1.3s) forwards paused;
+            animation: textos-equipo1 1.3s ease-in-out calc(var(--scroll) * -1.3s) forwards paused;
+  }
+  .texto-equipo2 {
+    bottom: 30%;
+    right: 100%;
+    -webkit-animation: textos-equipo2 1.3s ease-in-out calc(var(--scroll) * -1.3s) forwards paused;
+            animation: textos-equipo2 1.3s ease-in-out calc(var(--scroll) * -1.3s) forwards paused;
+  }
+  @-webkit-keyframes textos-equipo1 {
+    to {
+      left: -10%;
+    }
+  }
+  @keyframes textos-equipo1 {
+    to {
+      left: -10%;
+    }
+  }
+  @-webkit-keyframes textos-equipo2 {
+    to {
+      right: -10%;
+    }
+  }
+  @keyframes textos-equipo2 {
+    to {
+      right: -10%;
+    }
+  }
+  .contacto {
+    font-size: 3rem;
+    padding-top: 3rem;
+    letter-spacing: .3rem;
+  }
+  #contacto > div > div,
+  .formulario {
+    width: 90%;
+  }
+  .logo-footer {
+    width: 100;
+    margin-top: 2rem;
+  }
+  #footer > div {
+    border-bottom: none !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .texto-filosofia1 {
+    font-size: .8rem;
+    top: 30%;
+  }
+  .texto-filosofia2 {
+    font-size: .8rem;
+    bottom: 15%;
+  }
+  .texto-equipo2 {
+    bottom: 20%;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  #filosofia {
+    height: 120%;
+  }
+  #filosofia > h1,
+  .servicios > h1, .contacto {
+    font-size: 2.5rem;
+    letter-spacing: 1.5;
+  }
+  .texto-filosofia1 {
+    top: 25%;
+  }
+  .texto-filosofia2 {
+    bottom: 10%;
+  }
+  .texto-equipo2 {
+    bottom: 15%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -16,17 +16,505 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <!-- Icons -->
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>   
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> 
+        <!-- Animate -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+        <link rel="stylesheet" type="text/css" href="Animate/animate.css"/>
         <style>
             html{
                 scroll-behavior: smooth;
             }
         </style>
     </head>
-    <body class="container-fluid">
-        
+    <body class="container-fluid p-0 m-0">
+        <header id="header" class="vh-100 hero-background position-relative">
+
+            <!-- NAV DESKTOP -->
+
+            <nav class="d-none d-lg-block navbar navbar-expand-lg navbar-light pt-4 p-lg-4">
+                <div class="container-fluid">
+                    <a id="main-logo" class="navbar-brand" href="#"><img src="/images/logo.svg" alt="logo JC IT Consulting"></a>
+                    <div class="justify-content-end" id="navbarNavDropdown">
+                        <ul class="navbar-nav text-roboto dark-grey fw-bold fs-6 text-uppercase align-items-end">
+                            <li class="nav-item mx-lg-2"><a class="nav-link" aria-current="page" href="#quienesSomos">QUIENES SOMOS</a></li>
+                            <li class="nav-item mx-lg-2"><a class="nav-link" href="#filosofia">FILOSOFÍA</a></li>
+                            <li class="nav-item mx-lg-2 dropdown-link">
+                                <a class="nav-link dropdown-toggle" href="#servicios" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                SERVICIOS
+                                </a>
+                                <ul class="submenu shadow py-4 px-0 m-0 text-montserrat-SC" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item py-3 text-wrap" href="#">Planeamiento estratégico de sistemas</a></li>
+                                    <li><a class="dropdown-item py-3 text-wrap" href="#">Dirección y gestión de proyectos informáticos</a></li>
+                                    <li><a class="dropdown-item py-3 text-wrap" href="#">Reporting / Seguimiento financiero</a></li>
+                                    <li><a class="dropdown-item py-3 text-wrap" href="#">Procesos de IT</a></li>
+                                    <li><a class="dropdown-item py-3 text-wrap" href="#">Staffing</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-lg-2"><a class="nav-link" href="#equipo">EQUIPO PROFESIONAL</a></li>
+                            <li class="nav-item mx-lg-2"><a class="nav-link" href="#contacto">CONTACTO</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- NAV MOBILE -->
+            
+            <nav class="d-block d-lg-none navbar position-relative top-0 end-0">
+                <div id="myNav" class="nav-overlay">
+                    <a href="javascript:void(0)" class="position-absolute top-0 end-0 p-4" id="closeNav"><img src="images/close-btn.svg" alt="closebtn" width="30"></a>
+                    <ul id="navLinks" class="d-flex flex-column text-roboto dark-grey fw-bold fs-4 text-uppercase align-items-end position-absolute end-0">
+                        <li class="nav-item my-3"><a class="nav-link" aria-current="page" href="#quienesSomos">QUIENES SOMOS</a></li>
+                        <li class="nav-item my-3"><a class="nav-link" href="#filosofia">FILOSOFÍA</a></li>
+                        <li class="my-3 dropdown-link">
+                            <a class="nav-link dropdown-toggle" href="#servicios" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SERVICIOS
+                            </a>
+                            <ul class="submenu shadow py-4 px-0 m-0 text-montserrat-SC fs-6" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item py-2 text-wrap" href="#planeamiento">Planeamiento estratégico de sistemas</a></li>
+                                <li><a class="dropdown-item py-2 text-wrap" href="#direccion">Dirección y gestión de proyectos informáticos</a></li>
+                                <li><a class="dropdown-item py-2 text-wrap" href="#reporting">Reporting / Seguimiento financiero</a></li>
+                                <li><a class="dropdown-item py-2 text-wrap" href="#procesosIT">Procesos de IT</a></li>
+                                <li><a class="dropdown-item py-2 text-wrap" href="#staffing">Staffing</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item my-3"><a class="nav-link" href="#equipo">EQUIPO PROFESIONAL</a></li>
+                        <li class="nav-item my-3"><a class="nav-link" href="#contacto">CONTACTO</a></li>
+                    </ul>
+                </div>
+                <div class="fixed-action-btn p-2">
+                    <!-- <a id="main-logo" class="navbar-brand position-absolute start-50 translate-middle-x me-0 " href="#"><img src="/images/logo centrado_1.svg" width="250" alt="logo JC IT Consulting"></a> -->
+                    <a class="navbar-toggler-icon text-decoration-none position-absolute end-0 me-4" id="openNav">
+                        <i class="bi bi-list menuBarsMobile display-1 dark-grey"></i>
+                    </a>
+                </div>
+            </nav>
+
+            <a id="main-logo" class="d-block d-lg-none mx-auto mt-4" href="#"><img src="/images/logo centrado_1.svg" width="250" alt="logo JC IT Consulting"></a>
+            <div class="hero-tittle mt-lg-5">
+                <h1 class="text-arvo text-center d-block my-4 pt-4 my-lg-5 pt-lg-5 wow">Soporte integral en <br>Organización y Sistemas</h1>
+                <h5 class="text-montserrat fw-lighter text-center white d-none d-lg-block">Más de 30 años de experiencia acercando la <br>innovación y la evolución tecnológica a las empresas.</h5>
+                <h5 class="text-montserrat fw-lighter text-center white pt-4 d-block d-lg-none px-2">Más de 30 años de experiencia acercando la innovación y la evolución tecnológica a las empresas.</h5>
+            </div>
+            <div class="hero-cta d-block mx-auto mt-5 mt-lg-3">
+                <a href="#quienesSomos" class="text-decoration-none">
+                    <p class="text-roboto fs-5 text-uppercase fw-light text-center white mb-2 pt-5">conocenos</p>
+                    <svg class="d-block mx-auto text-center" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                        <path d="M0 14.9C0 14.3 0.299999 13.7 0.799999 13.3C1.7 12.6 2.9 12.8 3.6 13.6L20.6 35L37.6 13.6C38.3 12.7 39.5 12.6 40.4 13.3C41.3 14 41.4 15.2 40.7 16.1L22 39.4C21.6 39.9 21 40.2 20.4 40.2C19.8 40.2 19.2 39.9 18.8 39.4L0.400002 16.1C0.100002 15.7 0 15.3 0 14.9Z" fill="#F37A21"/>
+                        <path d="M0 2C0 1.4 0.299999 0.800002 0.799999 0.400001C1.7 -0.299998 2.9 -0.0999985 3.6 0.700001L20.6 22.1L37.4 0.800002C38.1 -0.0999985 39.3 -0.199998 40.2 0.500001C41.1 1.2 41.2 2.4 40.5 3.3L22 26.6C21.6 27.1 21 27.4 20.4 27.4C19.8 27.4 19.2 27.1 18.8 26.6L0.400002 3.2C0.100002 2.9 0 2.4 0 2Z" fill="#F37A21"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0">
+                        <rect width="40.2" height="41" fill="white" transform="translate(41) rotate(90)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+        </header>
+        <main>
+
+            <!-- QUIENES SOMOS -->
+            <section id="quienesSomos" class="h-75 mt-3 mt-lg-5">
+                <h4 class="text-arvo text-center d-block w-75 mx-auto my-0 my-lg-5 py-5">Somos una empresa de servicios en el área de IT dedicada a brindar soporte integral de <span class="orange">consultoría en organización y sistemas.</span></h4>
+                <div class="items-qs d-flex flex-column flex-lg-row w-75 mx-auto">
+                    <div class="items-qs-first text-center col">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.0501 11.509C32.7925 11.5092 32.5405 11.5836 32.3242 11.7233C26.9814 15.1767 23.6219 20.2842 22.0758 23.0673L19.2722 19.4009C19.1654 19.261 19.0322 19.1435 18.88 19.0552C18.7278 18.9669 18.5597 18.9094 18.3853 18.8862C18.2109 18.8629 18.0336 18.8743 17.8636 18.9196C17.6936 18.965 17.5342 19.0434 17.3946 19.1505C17.2548 19.2573 17.1375 19.3906 17.0493 19.5428C16.961 19.695 16.9037 19.8631 16.8804 20.0374C16.8572 20.2118 16.8685 20.389 16.9137 20.559C16.959 20.729 17.0373 20.8884 17.1441 21.0282L21.2415 26.3854C21.3834 26.5705 21.5711 26.7154 21.7861 26.8058C22.0011 26.8963 22.236 26.9291 22.4675 26.901C22.6991 26.8728 22.9193 26.7845 23.1063 26.645C23.2933 26.5054 23.4406 26.3195 23.5336 26.1055C23.567 26.0292 26.9432 18.3897 33.7786 13.9734C34.0211 13.8161 34.2063 13.5847 34.3065 13.3136C34.4067 13.0425 34.4165 12.7463 34.3346 12.4691C34.2527 12.1919 34.0833 11.9487 33.8518 11.7757C33.6203 11.6026 33.3391 11.5091 33.0501 11.509" fill="#FFFFFE"/>
+                            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="44" height="44">
+                            <path d="M0.615479 43.6522V0.821411H43.4304V43.6522H0.615479Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M28.6989 20.4396V29.5896H15.3067V16.1967H25.2652C26.0801 15.2552 26.9479 14.3609 27.8646 13.5181H15.3067C14.5964 13.5181 13.9151 13.8003 13.4128 14.3027C12.9105 14.805 12.6283 15.4863 12.6283 16.1967V29.5896C12.6283 30.3 12.9105 30.9813 13.4128 31.4836C13.9151 31.986 14.5964 32.2682 15.3067 32.2682H28.6989C29.4093 32.2682 30.0906 31.986 30.5929 31.4836C31.0952 30.9813 31.3774 30.3 31.3774 29.5896V17.5547C30.4184 18.4528 29.5234 19.4167 28.6989 20.4396" fill="#FFFFFE"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.7793 13.9724C26.944 18.3888 23.5678 26.0282 23.5343 26.1045C23.4413 26.3185 23.2941 26.5045 23.1071 26.6441C22.9201 26.7836 22.6999 26.8719 22.4683 26.9002C22.2367 26.9285 22.0018 26.8958 21.7867 26.8053C21.5717 26.7148 21.384 26.5698 21.2422 26.3844L17.1449 21.0272C16.9291 20.745 16.8343 20.3886 16.8812 20.0365C16.9282 19.6843 17.1131 19.3653 17.3953 19.1495C17.6775 18.9337 18.0339 18.8389 18.386 18.8858C18.7381 18.9328 19.0571 19.1177 19.2729 19.4L22.0766 23.0663C23.6227 20.2832 26.9821 15.1758 32.3249 11.7224C32.4727 11.6269 32.6378 11.5614 32.8108 11.5296C32.9838 11.4979 33.1614 11.5006 33.3334 11.5376C33.5054 11.5745 33.6684 11.645 33.8132 11.7449C33.958 11.8449 34.0816 11.9724 34.1771 12.1202C34.3698 12.4186 34.4362 12.7813 34.3616 13.1287C34.2871 13.476 34.0776 13.7795 33.7793 13.9724V13.9724ZM31.3781 29.5887C31.3781 30.2991 31.0959 30.9804 30.5936 31.4828C30.0913 31.9851 29.41 32.2673 28.6997 32.2673H15.3075C14.5971 32.2673 13.9158 31.9851 13.4135 31.4828C12.9112 30.9804 12.629 30.2991 12.629 29.5887V16.1957C12.629 15.4853 12.9112 14.804 13.4135 14.3016C13.9158 13.7993 14.5971 13.5171 15.3075 13.5171H27.8653C26.9487 14.3598 26.0808 15.2541 25.2659 16.1957H15.3075V29.5887H28.6997V20.4386C29.5242 19.4157 30.4192 18.4518 31.3781 17.5537V29.5887ZM22.0036 0.793701C10.1696 0.793701 0.57605 10.3878 0.57605 22.2225C0.57605 34.0573 10.1696 43.6514 22.0036 43.6514C33.8376 43.6514 43.4311 34.0573 43.4311 22.2225C43.4311 10.3878 33.8376 0.793701 22.0036 0.793701Z" fill="#F37A21"/>
+                            </g>
+                        </svg>
+                        <p class="text-montserrat dark-grey mt-3">Ayudamos a nuestros clientes a <span class="fw-bold">mejorar los resultados del negocio</span> a través de la tecnología informática.</p>
+                    </div>
+                    <div class="items-qs-second text-center col mx-lg-5">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.0501 11.509C32.7925 11.5092 32.5405 11.5836 32.3242 11.7233C26.9814 15.1767 23.6219 20.2842 22.0758 23.0673L19.2722 19.4009C19.1654 19.261 19.0322 19.1435 18.88 19.0552C18.7278 18.9669 18.5597 18.9094 18.3853 18.8862C18.2109 18.8629 18.0336 18.8743 17.8636 18.9196C17.6936 18.965 17.5342 19.0434 17.3946 19.1505C17.2548 19.2573 17.1375 19.3906 17.0493 19.5428C16.961 19.695 16.9037 19.8631 16.8804 20.0374C16.8572 20.2118 16.8685 20.389 16.9137 20.559C16.959 20.729 17.0373 20.8884 17.1441 21.0282L21.2415 26.3854C21.3834 26.5705 21.5711 26.7154 21.7861 26.8058C22.0011 26.8963 22.236 26.9291 22.4675 26.901C22.6991 26.8728 22.9193 26.7845 23.1063 26.645C23.2933 26.5054 23.4406 26.3195 23.5336 26.1055C23.567 26.0292 26.9432 18.3897 33.7786 13.9734C34.0211 13.8161 34.2063 13.5847 34.3065 13.3136C34.4067 13.0425 34.4165 12.7463 34.3346 12.4691C34.2527 12.1919 34.0833 11.9487 33.8518 11.7757C33.6203 11.6026 33.3391 11.5091 33.0501 11.509" fill="#FFFFFE"/>
+                            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="44" height="44">
+                            <path d="M0.615479 43.6522V0.821411H43.4304V43.6522H0.615479Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M28.6989 20.4396V29.5896H15.3067V16.1967H25.2652C26.0801 15.2552 26.9479 14.3609 27.8646 13.5181H15.3067C14.5964 13.5181 13.9151 13.8003 13.4128 14.3027C12.9105 14.805 12.6283 15.4863 12.6283 16.1967V29.5896C12.6283 30.3 12.9105 30.9813 13.4128 31.4836C13.9151 31.986 14.5964 32.2682 15.3067 32.2682H28.6989C29.4093 32.2682 30.0906 31.986 30.5929 31.4836C31.0952 30.9813 31.3774 30.3 31.3774 29.5896V17.5547C30.4184 18.4528 29.5234 19.4167 28.6989 20.4396" fill="#FFFFFE"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.7793 13.9724C26.944 18.3888 23.5678 26.0282 23.5343 26.1045C23.4413 26.3185 23.2941 26.5045 23.1071 26.6441C22.9201 26.7836 22.6999 26.8719 22.4683 26.9002C22.2367 26.9285 22.0018 26.8958 21.7867 26.8053C21.5717 26.7148 21.384 26.5698 21.2422 26.3844L17.1449 21.0272C16.9291 20.745 16.8343 20.3886 16.8812 20.0365C16.9282 19.6843 17.1131 19.3653 17.3953 19.1495C17.6775 18.9337 18.0339 18.8389 18.386 18.8858C18.7381 18.9328 19.0571 19.1177 19.2729 19.4L22.0766 23.0663C23.6227 20.2832 26.9821 15.1758 32.3249 11.7224C32.4727 11.6269 32.6378 11.5614 32.8108 11.5296C32.9838 11.4979 33.1614 11.5006 33.3334 11.5376C33.5054 11.5745 33.6684 11.645 33.8132 11.7449C33.958 11.8449 34.0816 11.9724 34.1771 12.1202C34.3698 12.4186 34.4362 12.7813 34.3616 13.1287C34.2871 13.476 34.0776 13.7795 33.7793 13.9724V13.9724ZM31.3781 29.5887C31.3781 30.2991 31.0959 30.9804 30.5936 31.4828C30.0913 31.9851 29.41 32.2673 28.6997 32.2673H15.3075C14.5971 32.2673 13.9158 31.9851 13.4135 31.4828C12.9112 30.9804 12.629 30.2991 12.629 29.5887V16.1957C12.629 15.4853 12.9112 14.804 13.4135 14.3016C13.9158 13.7993 14.5971 13.5171 15.3075 13.5171H27.8653C26.9487 14.3598 26.0808 15.2541 25.2659 16.1957H15.3075V29.5887H28.6997V20.4386C29.5242 19.4157 30.4192 18.4518 31.3781 17.5537V29.5887ZM22.0036 0.793701C10.1696 0.793701 0.57605 10.3878 0.57605 22.2225C0.57605 34.0573 10.1696 43.6514 22.0036 43.6514C33.8376 43.6514 43.4311 34.0573 43.4311 22.2225C43.4311 10.3878 33.8376 0.793701 22.0036 0.793701Z" fill="#F37A21"/>
+                            </g>
+                        </svg>
+                        <p class="text-montserrat dark-grey mt-3">Acompañamos a la organización y su estructura de IT para ampliar su visión para el diseño de nuevos modelos digitalizando su operación, <span class="fw-bold">integrando las nuevas tecnologías.</span></p>
+                    </div>
+                    <div class=" items-qs-third text-center col">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.0501 11.509C32.7925 11.5092 32.5405 11.5836 32.3242 11.7233C26.9814 15.1767 23.6219 20.2842 22.0758 23.0673L19.2722 19.4009C19.1654 19.261 19.0322 19.1435 18.88 19.0552C18.7278 18.9669 18.5597 18.9094 18.3853 18.8862C18.2109 18.8629 18.0336 18.8743 17.8636 18.9196C17.6936 18.965 17.5342 19.0434 17.3946 19.1505C17.2548 19.2573 17.1375 19.3906 17.0493 19.5428C16.961 19.695 16.9037 19.8631 16.8804 20.0374C16.8572 20.2118 16.8685 20.389 16.9137 20.559C16.959 20.729 17.0373 20.8884 17.1441 21.0282L21.2415 26.3854C21.3834 26.5705 21.5711 26.7154 21.7861 26.8058C22.0011 26.8963 22.236 26.9291 22.4675 26.901C22.6991 26.8728 22.9193 26.7845 23.1063 26.645C23.2933 26.5054 23.4406 26.3195 23.5336 26.1055C23.567 26.0292 26.9432 18.3897 33.7786 13.9734C34.0211 13.8161 34.2063 13.5847 34.3065 13.3136C34.4067 13.0425 34.4165 12.7463 34.3346 12.4691C34.2527 12.1919 34.0833 11.9487 33.8518 11.7757C33.6203 11.6026 33.3391 11.5091 33.0501 11.509" fill="#FFFFFE"/>
+                            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="44" height="44">
+                            <path d="M0.615479 43.6522V0.821411H43.4304V43.6522H0.615479Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M28.6989 20.4396V29.5896H15.3067V16.1967H25.2652C26.0801 15.2552 26.9479 14.3609 27.8646 13.5181H15.3067C14.5964 13.5181 13.9151 13.8003 13.4128 14.3027C12.9105 14.805 12.6283 15.4863 12.6283 16.1967V29.5896C12.6283 30.3 12.9105 30.9813 13.4128 31.4836C13.9151 31.986 14.5964 32.2682 15.3067 32.2682H28.6989C29.4093 32.2682 30.0906 31.986 30.5929 31.4836C31.0952 30.9813 31.3774 30.3 31.3774 29.5896V17.5547C30.4184 18.4528 29.5234 19.4167 28.6989 20.4396" fill="#FFFFFE"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.7793 13.9724C26.944 18.3888 23.5678 26.0282 23.5343 26.1045C23.4413 26.3185 23.2941 26.5045 23.1071 26.6441C22.9201 26.7836 22.6999 26.8719 22.4683 26.9002C22.2367 26.9285 22.0018 26.8958 21.7867 26.8053C21.5717 26.7148 21.384 26.5698 21.2422 26.3844L17.1449 21.0272C16.9291 20.745 16.8343 20.3886 16.8812 20.0365C16.9282 19.6843 17.1131 19.3653 17.3953 19.1495C17.6775 18.9337 18.0339 18.8389 18.386 18.8858C18.7381 18.9328 19.0571 19.1177 19.2729 19.4L22.0766 23.0663C23.6227 20.2832 26.9821 15.1758 32.3249 11.7224C32.4727 11.6269 32.6378 11.5614 32.8108 11.5296C32.9838 11.4979 33.1614 11.5006 33.3334 11.5376C33.5054 11.5745 33.6684 11.645 33.8132 11.7449C33.958 11.8449 34.0816 11.9724 34.1771 12.1202C34.3698 12.4186 34.4362 12.7813 34.3616 13.1287C34.2871 13.476 34.0776 13.7795 33.7793 13.9724V13.9724ZM31.3781 29.5887C31.3781 30.2991 31.0959 30.9804 30.5936 31.4828C30.0913 31.9851 29.41 32.2673 28.6997 32.2673H15.3075C14.5971 32.2673 13.9158 31.9851 13.4135 31.4828C12.9112 30.9804 12.629 30.2991 12.629 29.5887V16.1957C12.629 15.4853 12.9112 14.804 13.4135 14.3016C13.9158 13.7993 14.5971 13.5171 15.3075 13.5171H27.8653C26.9487 14.3598 26.0808 15.2541 25.2659 16.1957H15.3075V29.5887H28.6997V20.4386C29.5242 19.4157 30.4192 18.4518 31.3781 17.5537V29.5887ZM22.0036 0.793701C10.1696 0.793701 0.57605 10.3878 0.57605 22.2225C0.57605 34.0573 10.1696 43.6514 22.0036 43.6514C33.8376 43.6514 43.4311 34.0573 43.4311 22.2225C43.4311 10.3878 33.8376 0.793701 22.0036 0.793701Z" fill="#F37A21"/>
+                            </g>
+                        </svg>
+                        <p class="text-montserrat dark-grey mt-3">Nuestra <span class="fw-bold">modalidad de trabajo está centrada y orientada al cliente,</span> adaptándonos a las circunstancias, requerimientos y oportunidades de cada uno.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FILOSOFIA -->
+            <section id="filosofia" class="position-relative p-2 p-lg-5 overflow-hidden">
+                <h1 class="d-block d-lg-none text-arvo white mb-0 mt-5 pt-4 text-center">FILOSOFÍA</h1>
+                <h1 class="d-none d-lg-block text-arvo white position-absolute ps-lg-5 mb-0">FILO<br>SO<br>FÍA</h1>
+                <div class="texto-filosofia1 rounded d-flex align-items-center p-3 p-lg-5 position-absolute">
+                    <p class="text-montserrat dark-grey text-center m-0">Ofrecemos un enfoque de <strong>Management Consulting</strong> con orientación estratégica y a resultados, con un esquema de trabajo integrado a la organización.</p>
+                </div>
+                <div class="texto-filosofia2 rounded d-flex align-items-center p-3 p-lg-5 position-absolute">
+                    <p class="text-montserrat dark-grey text-center m-0">Identificada y analizada la necesidad, diseñamos en forma conjunta el proyecto y esquema de complementación más apropiado para la organización, cubriendo distintos roles, como coaching ejecutivo, análisis de datos para toma de decisiones, planes estratégicos de sistemas, conducción y desarrollo de proyectos, como así también provisión de recursos calificados. </p>
+                </div>
+            </section>
+
+            <!-- SERVICIOS -->
+            <section id="servicios" class="servicios mt-lg-5 pt-lg-5">
+                <h1 class="text-arvo orange text-center mb-lg-5 py-5">SERVICIOS</h1>
+                
+                <!-- PLANEAMIENTO -->
+                <div id="planeamiento" class="items-servicios position-relative top-0 end-0">
+                    <div class="planeamiento row w-100 mt-lg-5 mx-0 p-3 p-lg-5 wow slideInRight">
+                        <div class="col align-self-center">
+                            <img class="iconos-servicios" src="images/icon_planning.svg" alt="planning">
+                            <h4 class="text-montserrat-SC dark-grey fw-bold fs-1 py-3 mb-0">Planeamiento estratégico de sistemas</h4>
+                            <p class="text-servicios text-montserrat dark-grey mb-0">Ayudamos a elaborar el Plan de Sistemas considerando la alineación de estrategias de IT con el negocio.</p>
+                        </div>
+                        <div class="col align-self-center">
+                            <button id="open-btn-1" type="button" class="open-btn border-0 bg-transparent text-arvo orange text-decoration-none fw-bold fs-3 d-flex flex-row justify-content-center ms-lg-5 ps-lg-5">
+                                <p class="m-0 pe-1 pe-lg-3">VER MÁS</p>
+                                <svg class="m-0" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                    <path d="M0 14.9C0 14.3 0.299999 13.7 0.799999 13.3C1.7 12.6 2.9 12.8 3.6 13.6L20.6 35L37.6 13.6C38.3 12.7 39.5 12.6 40.4 13.3C41.3 14 41.4 15.2 40.7 16.1L22 39.4C21.6 39.9 21 40.2 20.4 40.2C19.8 40.2 19.2 39.9 18.8 39.4L0.400002 16.1C0.100002 15.7 0 15.3 0 14.9Z" fill="#F37A21"/>
+                                    <path d="M0 2C0 1.4 0.299999 0.800002 0.799999 0.400001C1.7 -0.299998 2.9 -0.0999985 3.6 0.700001L20.6 22.1L37.4 0.800002C38.1 -0.0999985 39.3 -0.199998 40.2 0.500001C41.1 1.2 41.2 2.4 40.5 3.3L22 26.6C21.6 27.1 21 27.4 20.4 27.4C19.8 27.4 19.2 27.1 18.8 26.6L0.400002 3.2C0.100002 2.9 0 2.4 0 2Z" fill="#F37A21"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0">
+                                    <rect width="40.2" height="41" fill="white" transform="translate(41) rotate(90)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="overlay row mt-lg-5 mx-0 p-3 p-lg-5">
+                        <div class="col-lg-5 align-self-center">
+                            <h1 class="titulo-overlay text-montserrat-SC white fw-bold mb-0 display-2">Planeamiento estratégico de sistemas</h1>
+                        </div>
+                        <div id="close-btn-1" class="col-1 align-self-center close-btn">
+                            <svg class="m-0" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                <path d="M0 14.9C0 14.3 0.299999 13.7 0.799999 13.3C1.7 12.6 2.9 12.8 3.6 13.6L20.6 35L37.6 13.6C38.3 12.7 39.5 12.6 40.4 13.3C41.3 14 41.4 15.2 40.7 16.1L22 39.4C21.6 39.9 21 40.2 20.4 40.2C19.8 40.2 19.2 39.9 18.8 39.4L0.400002 16.1C0.100002 15.7 0 15.3 0 14.9Z" fill="#F37A21"/>
+                                <path d="M0 2C0 1.4 0.299999 0.800002 0.799999 0.400001C1.7 -0.299998 2.9 -0.0999985 3.6 0.700001L20.6 22.1L37.4 0.800002C38.1 -0.0999985 39.3 -0.199998 40.2 0.500001C41.1 1.2 41.2 2.4 40.5 3.3L22 26.6C21.6 27.1 21 27.4 20.4 27.4C19.8 27.4 19.2 27.1 18.8 26.6L0.400002 3.2C0.100002 2.9 0 2.4 0 2Z" fill="#F37A21"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0">
+                                <rect width="40.2" height="41" fill="white" transform="translate(41) rotate(90)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <ul class="textos-overlay col-lg align-self-center mb-0">
+                            <li class="text-montserrat dark-grey fs-6 lh-1 py-2 fw-light"><i class="bi bi-check-lg orange"></i><span class="fw-normal" style="line-height: 2.5;" > Mapeo y alineación de estrategias de IT con el negocio.</span><br> Entendiendo que la transformación digital se ha convertido en una pieza clave para mejorar la competitividad de una organización, se contempla una evaluación al respecto (Digitalization Assessment).</li>
+                            <li class="text-montserrat dark-grey fs-6 lh-1 py-2 fw-light"><i class="bi bi-check-lg orange"></i><span class="fw-normal" style="line-height: 2.5;" > Elaboración de Planes de sistemas considerando:</span><br>
+                                <i class="bi bi-dot dark-grey"></i> Aspectos de estructura organizativa.<br>
+                                <i class="bi bi-dot dark-grey"></i> Tecnología y aplicativos.<br>
+                                <i class="bi bi-dot dark-grey"></i> Proyectos y prioridades.<br>
+                                <i class="bi bi-dot dark-grey"></i> Servicios, outsourcing.<br>
+                                <i class="bi bi-dot dark-grey"></i> Selección de proveedores críticos.<br>
+                                <i class="bi bi-dot dark-grey"></i> Presupuesto.
+                            </li>
+                            <li class="text-montserrat dark-grey fs-6 lh-1 py-2"><i class="bi bi-check-lg orange"></i><span class="fw-normal" style="line-height: 2.5;" > Análisis, evaluación y selección de aplicaciones de misión crítica.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                    <!-- DIRECCION Y GESTION DE PROCESOS INF -->
+                <div id="direccion" class="items-servicios position-relative top-0 end-0">
+                    <div class="direccion row w-100 m-0 p-3 p-lg-5 wow slideInLeft">
+                        <div class="col align-self-center">
+                            <button id="open-btn-2" type="button" class="open-btn border-0 bg-transparent text-arvo orange text-decoration-none fw-bold fs-3 d-flex flex-row justify-content-center ms-lg-5 ps-lg-5">
+                                <svg class="m-0" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                    <path d="M0 14.9C0 14.3 0.299999 13.7 0.799999 13.3C1.7 12.6 2.9 12.8 3.6 13.6L20.6 35L37.6 13.6C38.3 12.7 39.5 12.6 40.4 13.3C41.3 14 41.4 15.2 40.7 16.1L22 39.4C21.6 39.9 21 40.2 20.4 40.2C19.8 40.2 19.2 39.9 18.8 39.4L0.400002 16.1C0.100002 15.7 0 15.3 0 14.9Z" fill="#F37A21"/>
+                                    <path d="M0 2C0 1.4 0.299999 0.800002 0.799999 0.400001C1.7 -0.299998 2.9 -0.0999985 3.6 0.700001L20.6 22.1L37.4 0.800002C38.1 -0.0999985 39.3 -0.199998 40.2 0.500001C41.1 1.2 41.2 2.4 40.5 3.3L22 26.6C21.6 27.1 21 27.4 20.4 27.4C19.8 27.4 19.2 27.1 18.8 26.6L0.400002 3.2C0.100002 2.9 0 2.4 0 2Z" fill="#F37A21"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0">
+                                    <rect width="40.2" height="41" fill="white" transform="translate(41) rotate(90)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <p class="m-0 ps-3">VER MÁS</p>
+                            </button>
+                        </div>
+                        <div class="col align-self-center text-end">
+                            <img class="iconos-servicios" src="images/icon_proyectosInf.svg" alt="planning">
+                            <h4 class="text-montserrat-SC dark-grey fw-bold fs-1 py-3 mb-0">Dirección y gestión de proyectos informáticos</h4>
+                            <p class="text-servicios text-montserrat dark-grey mb-0">Asumimos el rol de Gerente de Proyectos de distinta complejidad cuando la organización no dispone de los recursos necesarios.</p>
+                        </div>
+                    </div>
+                    <div class="overlay-2 row mx-0 p-4 p-xl-5">
+                        <div class="col-lg-5 align-self-center">
+                            <h1 class="titulo-overlay text-montserrat-SC white fw-bold mb-0 display-2 lh-1">Dirección y gestión de proyectos informáticos</h1>
+                        </div>
+                        <div id="close-btn-2" class="col-1 align-self-center close-btn">
+                            <svg class="m-0" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                <path d="M0 14.9C0 14.3 0.299999 13.7 0.799999 13.3C1.7 12.6 2.9 12.8 3.6 13.6L20.6 35L37.6 13.6C38.3 12.7 39.5 12.6 40.4 13.3C41.3 14 41.4 15.2 40.7 16.1L22 39.4C21.6 39.9 21 40.2 20.4 40.2C19.8 40.2 19.2 39.9 18.8 39.4L0.400002 16.1C0.100002 15.7 0 15.3 0 14.9Z" fill="#F37A21"/>
+                                <path d="M0 2C0 1.4 0.299999 0.800002 0.799999 0.400001C1.7 -0.299998 2.9 -0.0999985 3.6 0.700001L20.6 22.1L37.4 0.800002C38.1 -0.0999985 39.3 -0.199998 40.2 0.500001C41.1 1.2 41.2 2.4 40.5 3.3L22 26.6C21.6 27.1 21 27.4 20.4 27.4C19.8 27.4 19.2 27.1 18.8 26.6L0.400002 3.2C0.100002 2.9 0 2.4 0 2Z" fill="#F37A21"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0">
+                                <rect width="40.2" height="41" fill="white" transform="translate(41) rotate(90)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <ul class="textos-overlay col-lg align-self-center mb-0">
+                            <li class="text-montserrat dark-grey fs-6 py-2 fw-light"><i class="bi bi-check-lg orange"></i><span class="fw-normal lh-2"> Gestión de Proyectos:</span><br>
+                                <i class="bi bi-dot dark-grey"></i> Planificación, dirección y control de proyectos en distintas tecnologías, negocios e industrias.<br>
+                                <i class="bi bi-dot dark-grey"></i> Coordinación e interacción con equipos interdisciplinarios y con proveedores tecnológicos de distintas especializaciones.<br>
+                            </li>
+                            <li class="text-montserrat dark-grey fs-6 py-2 fw-light"><i class="bi bi-check-lg orange"></i><span class="fw-normal lh-2"> Oficina de Proyectos (PMO)</span><br>
+                                <i class="bi bi-dot dark-grey"></i> Diseño y armado de oficina de proyectos.<br>
+                                <i class="bi bi-dot dark-grey"></i> Diseño e implementación de políticas, normas y métricas.<br>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- REPORTING / SEG. FINANCIERO -->
+                <div id="reporting" class="items-servicios position-relative top-0 end-0">
+                    <div class="reporting row w-100 mx-0 p-3 p-lg-5 wow slideInRight">
+                        <div class="col align-self-center">
+                            <img class="iconos-servicios" src="images/icon_finance.svg" alt="planning">
+                            <h4 class="text-montserrat-SC dark-grey fw-bold fs-1 py-3 mb-0">Reporting <br>Seguimiento financiero</h4>
+                            <p class="text-servicios text-montserrat dark-grey mb-0">Brindamos soporte a las organizaciones para la toma de decisiones a través de la integración, explotación y análisis avanzado de datos.</p>
+                        </div>
+                        <div class="col align-self-center">
+                            <button id="open-btn-3" type="button" class="open-btn border-0 bg-transparent text-arvo orange text-decoration-none fw-bold fs-3 d-flex flex-row justify-content-center ms-lg-5 ps-lg-5">
+                                <p class="m-0 pe-3">VER MÁS</p>
+                                <svg class="m-0" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                    <path d="M0 14.9C0 14.3 0.299999 13.7 0.799999 13.3C1.7 12.6 2.9 12.8 3.6 13.6L20.6 35L37.6 13.6C38.3 12.7 39.5 12.6 40.4 13.3C41.3 14 41.4 15.2 40.7 16.1L22 39.4C21.6 39.9 21 40.2 20.4 40.2C19.8 40.2 19.2 39.9 18.8 39.4L0.400002 16.1C0.100002 15.7 0 15.3 0 14.9Z" fill="#F37A21"/>
+                                    <path d="M0 2C0 1.4 0.299999 0.800002 0.799999 0.400001C1.7 -0.299998 2.9 -0.0999985 3.6 0.700001L20.6 22.1L37.4 0.800002C38.1 -0.0999985 39.3 -0.199998 40.2 0.500001C41.1 1.2 41.2 2.4 40.5 3.3L22 26.6C21.6 27.1 21 27.4 20.4 27.4C19.8 27.4 19.2 27.1 18.8 26.6L0.400002 3.2C0.100002 2.9 0 2.4 0 2Z" fill="#F37A21"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0">
+                                    <rect width="40.2" height="41" fill="white" transform="translate(41) rotate(90)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="overlay-3 row mx-0 p-4 p-xl-5">
+                        <div class="col-lg-5 align-self-center">
+                            <h1 class="titulo-overlay text-montserrat-SC white fw-bold mb-0 display-2">Reporting <br>Seguimiento financiero</h1>
+                        </div>
+                        <div id="close-btn-3" class="col-1 align-self-center close-btn">
+                            <svg class="m-0" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                <path d="M0 14.9C0 14.3 0.299999 13.7 0.799999 13.3C1.7 12.6 2.9 12.8 3.6 13.6L20.6 35L37.6 13.6C38.3 12.7 39.5 12.6 40.4 13.3C41.3 14 41.4 15.2 40.7 16.1L22 39.4C21.6 39.9 21 40.2 20.4 40.2C19.8 40.2 19.2 39.9 18.8 39.4L0.400002 16.1C0.100002 15.7 0 15.3 0 14.9Z" fill="#F37A21"/>
+                                <path d="M0 2C0 1.4 0.299999 0.800002 0.799999 0.400001C1.7 -0.299998 2.9 -0.0999985 3.6 0.700001L20.6 22.1L37.4 0.800002C38.1 -0.0999985 39.3 -0.199998 40.2 0.500001C41.1 1.2 41.2 2.4 40.5 3.3L22 26.6C21.6 27.1 21 27.4 20.4 27.4C19.8 27.4 19.2 27.1 18.8 26.6L0.400002 3.2C0.100002 2.9 0 2.4 0 2Z" fill="#F37A21"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0">
+                                <rect width="40.2" height="41" fill="white" transform="translate(41) rotate(90)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <ul class="textos-overlay col-lg align-self-center mb-0">
+                            <li class="text-montserrat dark-grey fs-6 lh-1 py-2 fw-light"><i class="bi bi-check-lg orange"></i><span class="fw-normal" style="line-height: 2.5;" > Mapeo y alineación de estrategias de IT con el negocio.</span><br> Entendiendo que la transformación digital se ha convertido en una pieza clave para mejorar la competitividad de una organización, se contempla una evaluación al respecto (Digitalization Assessment).</li>
+                            <li class="text-montserrat dark-grey fs-6 lh-1 py-2 fw-light"><i class="bi bi-check-lg orange"></i><span class="fw-normal" style="line-height: 2.5;" > Elaboración de Planes de sistemas considerando:</span><br>
+                                <i class="bi bi-dot dark-grey"></i> Aspectos de estructura organizativa.<br>
+                                <i class="bi bi-dot dark-grey"></i> Tecnología y aplicativos.<br>
+                                <i class="bi bi-dot dark-grey"></i> Proyectos y prioridades.<br>
+                                <i class="bi bi-dot dark-grey"></i> Servicios, outsourcing.<br>
+                                <i class="bi bi-dot dark-grey"></i> Selección de proveedores críticos.<br>
+                                <i class="bi bi-dot dark-grey"></i> Presupuesto.
+                            </li>
+                            <li class="text-montserrat dark-grey fs-6 lh-1 py-2"><i class="bi bi-check-lg orange"></i><span class="fw-normal" style="line-height: 2.5;"> Análisis, evaluación y selección de aplicaciones de misión crítica.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PROCESOS IT -->
+                <div id="procesosIT" class="items-servicios position-relative top-0 end-0">
+                    <div class="procesosIT row w-100 m-0 p-3 p-lg-5 wow slideInLeft">
+                        <div class="col align-self-center">
+                            <button id="open-btn-4" type="button" class="open-btn border-0 bg-transparent text-arvo orange text-decoration-none fw-bold fs-3 d-flex flex-row justify-content-center ms-lg-5 ps-lg-5">
+                                <svg class="m-0" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                    <path d="M0 14.9C0 14.3 0.299999 13.7 0.799999 13.3C1.7 12.6 2.9 12.8 3.6 13.6L20.6 35L37.6 13.6C38.3 12.7 39.5 12.6 40.4 13.3C41.3 14 41.4 15.2 40.7 16.1L22 39.4C21.6 39.9 21 40.2 20.4 40.2C19.8 40.2 19.2 39.9 18.8 39.4L0.400002 16.1C0.100002 15.7 0 15.3 0 14.9Z" fill="#F37A21"/>
+                                    <path d="M0 2C0 1.4 0.299999 0.800002 0.799999 0.400001C1.7 -0.299998 2.9 -0.0999985 3.6 0.700001L20.6 22.1L37.4 0.800002C38.1 -0.0999985 39.3 -0.199998 40.2 0.500001C41.1 1.2 41.2 2.4 40.5 3.3L22 26.6C21.6 27.1 21 27.4 20.4 27.4C19.8 27.4 19.2 27.1 18.8 26.6L0.400002 3.2C0.100002 2.9 0 2.4 0 2Z" fill="#F37A21"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0">
+                                    <rect width="40.2" height="41" fill="white" transform="translate(41) rotate(90)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <p class="m-0 ps-3">VER MÁS</p>
+                            </button>
+                        </div>
+                        <div class="col align-self-center text-end">
+                            <img class="iconos-servicios" src="images/icon_procesosIT.svg" alt="planning">
+                            <h4 class="text-montserrat-SC dark-grey fw-bold fs-1 py-3 mb-0">Procesos del área de IT</h4>
+                            <p class="text-servicios text-montserrat dark-grey mb-0">Ayudamos a diagnosticar y actuar sobre los procesos del área de sistemas.</p>
+                        </div>
+                    </div>
+                    <div class="overlay-4 row mx-0 p-4 p-xl-5">
+                        <div class="col-lg-5 align-self-center">
+                            <h1 class="titulo-overlay text-montserrat-SC white fw-bold mb-0 display-2 lh-1">Procesos del área de IT</h1>
+                        </div>
+                        <div id="close-btn-4" class="col-1 align-self-center close-btn">
+                            <svg class="m-0" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                <path d="M0 14.9C0 14.3 0.299999 13.7 0.799999 13.3C1.7 12.6 2.9 12.8 3.6 13.6L20.6 35L37.6 13.6C38.3 12.7 39.5 12.6 40.4 13.3C41.3 14 41.4 15.2 40.7 16.1L22 39.4C21.6 39.9 21 40.2 20.4 40.2C19.8 40.2 19.2 39.9 18.8 39.4L0.400002 16.1C0.100002 15.7 0 15.3 0 14.9Z" fill="#F37A21"/>
+                                <path d="M0 2C0 1.4 0.299999 0.800002 0.799999 0.400001C1.7 -0.299998 2.9 -0.0999985 3.6 0.700001L20.6 22.1L37.4 0.800002C38.1 -0.0999985 39.3 -0.199998 40.2 0.500001C41.1 1.2 41.2 2.4 40.5 3.3L22 26.6C21.6 27.1 21 27.4 20.4 27.4C19.8 27.4 19.2 27.1 18.8 26.6L0.400002 3.2C0.100002 2.9 0 2.4 0 2Z" fill="#F37A21"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0">
+                                <rect width="40.2" height="41" fill="white" transform="translate(41) rotate(90)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <ul class="textos-overlay col-lg align-self-center mb-0">
+                            <li class="text-montserrat dark-grey fs-6 py-2 fw-light"><i class="bi bi-check-lg orange"></i><span class="fw-normal lh-2"> Implementación de metodologías para el Desarrollo de sistemas.</span></li>
+                            <li class="text-montserrat dark-grey fs-6 py-2 fw-light"><i class="bi bi-check-lg orange"></i><span class="fw-normal lh-2"> Revisión e identificación de riesgos operativos en procesos de sistemas y elaboración de planes de contingencia.</span></li>
+                            <li class="text-montserrat dark-grey fs-6 py-2 fw-light"><i class="bi bi-check-lg orange"></i><span class="fw-normal lh-2"> Definición de políticas, estándares y métricas para la administración de recursos informáticos.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- STAFFING -->
+                <div id="staffing" class="items-servicios position-relative top-0 end-0">
+                    <div class="staffing row w-100 mx-0 p-3 p-lg-5 wow slideInRight">
+                        <div class="col align-self-center">
+                            <img class="iconos-servicios" src="images/icon_staffing.svg" alt="planning" >
+                            <h4 class="text-montserrat-SC dark-grey fw-bold fs-1 py-3 mb-0">Staffing</h4>
+                            <p class="text-servicios text-montserrat dark-grey mb-0">Contamos con equipos de trabajo altamente capacitados y vinculados con IT dentro del staff. Extensa red de contactos que nos permite seleccionar candidatos según el perfil requerido por el cliente.</p>
+                        </div>
+                        <div class="col align-self-center">
+                            <button id="open-btn-5" type="button" class="open-btn border-0 bg-transparent text-arvo orange text-decoration-none fw-bold fs-3 d-flex flex-row justify-content-center ms-lg-5 ps-lg-5">
+                                <p class="m-0 pe-3">VER MÁS</p>
+                                <svg class="m-0" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                    <path d="M0 14.9C0 14.3 0.299999 13.7 0.799999 13.3C1.7 12.6 2.9 12.8 3.6 13.6L20.6 35L37.6 13.6C38.3 12.7 39.5 12.6 40.4 13.3C41.3 14 41.4 15.2 40.7 16.1L22 39.4C21.6 39.9 21 40.2 20.4 40.2C19.8 40.2 19.2 39.9 18.8 39.4L0.400002 16.1C0.100002 15.7 0 15.3 0 14.9Z" fill="#F37A21"/>
+                                    <path d="M0 2C0 1.4 0.299999 0.800002 0.799999 0.400001C1.7 -0.299998 2.9 -0.0999985 3.6 0.700001L20.6 22.1L37.4 0.800002C38.1 -0.0999985 39.3 -0.199998 40.2 0.500001C41.1 1.2 41.2 2.4 40.5 3.3L22 26.6C21.6 27.1 21 27.4 20.4 27.4C19.8 27.4 19.2 27.1 18.8 26.6L0.400002 3.2C0.100002 2.9 0 2.4 0 2Z" fill="#F37A21"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0">
+                                    <rect width="40.2" height="41" fill="white" transform="translate(41) rotate(90)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="overlay-5 row mx-0 p-4 p-xl-5">
+                        <div class="col-lg-5 align-self-center">
+                            <h1 class="titulo-overlay text-montserrat-SC white fw-bold mb-0 display-2">Staffing</h1>
+                        </div>
+                        <div id="close-btn-5" class="col-1 align-self-center close-btn">
+                            <svg class="m-0" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                <path d="M0 14.9C0 14.3 0.299999 13.7 0.799999 13.3C1.7 12.6 2.9 12.8 3.6 13.6L20.6 35L37.6 13.6C38.3 12.7 39.5 12.6 40.4 13.3C41.3 14 41.4 15.2 40.7 16.1L22 39.4C21.6 39.9 21 40.2 20.4 40.2C19.8 40.2 19.2 39.9 18.8 39.4L0.400002 16.1C0.100002 15.7 0 15.3 0 14.9Z" fill="#F37A21"/>
+                                <path d="M0 2C0 1.4 0.299999 0.800002 0.799999 0.400001C1.7 -0.299998 2.9 -0.0999985 3.6 0.700001L20.6 22.1L37.4 0.800002C38.1 -0.0999985 39.3 -0.199998 40.2 0.500001C41.1 1.2 41.2 2.4 40.5 3.3L22 26.6C21.6 27.1 21 27.4 20.4 27.4C19.8 27.4 19.2 27.1 18.8 26.6L0.400002 3.2C0.100002 2.9 0 2.4 0 2Z" fill="#F37A21"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0">
+                                <rect width="40.2" height="41" fill="white" transform="translate(41) rotate(90)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <ul class="textos-overlay col-lg align-self-center mb-0 lh-1">
+                            <li class="text-montserrat dark-grey fs-6 py-2 fw-light"><i class="bi bi-check-lg orange"></i><span class="fw-normal" style="line-height: 2.5;"> Perfiles:</span><br>
+                                <i class="bi bi-dot dark-grey"></i> Gerenciales.<br>
+                                <i class="bi bi-dot dark-grey"></i> Mandos medios (líderes de proyecto, coordinadores).<br>
+                                <i class="bi bi-dot dark-grey"></i> Especialistas (analistas funcionales, desarrolladores, infraestructura, analistas de procesos de IT y de negocio, analistas de QA, testers).<br>
+                            </li>
+                            <li class="text-montserrat dark-grey fs-6 py-2 fw-light"><i class="bi bi-check-lg orange"></i><span class="fw-normal" style="line-height: 2.5;"> Modalidades del servicio:</span><br>
+                                <i class="bi bi-dot dark-grey"></i> <strong>Recruiting:</strong> Búsqueda y selección de recursos de IT con formación técnica específica, especializados en distintas plataformas y herramientas.<br>
+                                <i class="bi bi-dot dark-grey"></i> <strong>Contratación temporal:</strong> Esta modalidad permite acceder a recursos humanos para satisfacer necesidades variables de personal por períodos específicos, en circunstancias tales como sobrecarga de trabajo, proyectos particulares, vacaciones u otro tipo de situaciones donde no se justifica la incorporación de especialistas de forma permanente.<br>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EQUIPO PROFESIONAL -->
+            <section id="equipo" class="position-relative p-2 p-lg-5">
+                <h1 class="d-none d-lg-block text-arvo text-end white position-absolute end-0 pe-5 mb-0">EQUIPO <br>PROFESIONAL</h1>
+                <h1 class="d-block d-lg-none text-arvo text-center white position-absolute mb-0 pt-4">EQUIPO PROFESIONAL</h1>
+                <div class="texto-equipo1 rounded d-flex align-items-center p-3 p-lg-5 position-absolute">
+                    <p class="text-montserrat dark-grey text-center m-0">Acompaña a <strong>Julia Carreras</strong> un grupo destacado de profesionales altamente calificados, con conocimientos y habilidades necesarios para asistir en los procesos de cambio de nuestros clientes e implementar la solución tecnológica más adecuada a sus necesidades.</p>
+                </div>
+                <div class="texto-equipo2 rounded d-flex align-items-center p-3 p-lg-5 position-absolute">
+                    <p class="text-montserrat dark-grey text-center m-0">Adicionalmente contamos con un <strong>equipo de especialistas</strong> que brinda soporte durante el desarrollo de los proyectos del cliente según las necesidades específicas y la plataforma tecnológica correspondiente.</p>
+                </div>
+            </section>
+
+            <!-- CONTACTO -->
+            <section id="contacto" class="mt-5 p-2 p-lg-5">
+                <h1 class="contacto text-arvo orange text-center mb-5 py-5">CONTACTO</h1>
+                <p class="text-montserrat dark-grey text-center mb-5">Envianos tu consulta y te responderemos a la brevedad.</p>
+                <div class="d-flex flex-column flex-lg-row align-items-center align-items-lg-stretch justify-content-center mb-5">
+                    <form class="formulario d-flex flex-column text-montserrat dark-grey mb-lg-0 me-lg-5 wow slideInUp" name="contact" method="POST" data-netlify="true">
+                        <input type="text" name="nombre" required placeholder="Nombre:" class="bg-mdgray rounded-3 p-3 mt-0"/>
+                        <input type="number" name="telefono" placeholder="Teléfono (opcional):" class="bg-mdgray rounded-3 p-3"/>
+                        <input type="email" name="email" required placeholder="Email:" class="bg-mdgray rounded-3 p-3"/>
+                        <textarea name="message" rows="5" cols="80" placeholder="Mensaje" class="bg-mdgray rounded-3 p-3"></textarea>
+                        <button type="submit" class="boton rounded-pill bg-orange white px-5 py-2 mx-auto m-lg-0 fw-bold">ENVIAR</button>
+                    </form>
+                    <div class="d-flex flex-column p-4 shadow mt-3 mt-lg-0 ms-lg-5 justify-content-evenly wow slideInUp">
+                        <p class="text-montserrat dark-grey text-center mb-0 fw-bold">Julia Carreras</p>
+                        <p class="text-montserrat dark-grey text-center mb-0 fw-light">Libertador 3676 Piso 9 <br>(1636) Vicente Lopez - Buenos Aires Argentina</p>
+                        <p class="text-montserrat dark-grey text-center mb-0 fw-light">Tel: (54 11) 4519 2342 <br>(54 9 11) 5759 6700</p>
+                        <p class="text-montserrat dark-grey text-center mb-0 fw-light">
+                            <a href="mailto:info@jcitconsulting.com.ar" target="blank" class="text-decoration-none dark-grey links-contacto" >info@jcitconsulting.com.ar</a><br> 
+                            <a href="http://www.jcitconsulting.com.ar/" target="blank" class="text-decoration-none dark-grey links-contacto">www.jcitconsulting.com.ar</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="py-5 contacto-cv">
+                    <p class="text-montserrat dark-grey text-center">¿Te gustaría formar parte de nuestro equipo?<br> 
+                        Envianos tu CV a <a href="mailto:rrhh@jcitconsulting.com.ar" class="fw-bold text-decoration-none dark-grey">rrhh@jcitconsulting.com.ar</a>
+                    </p>
+                </div>
+            </section>
+        </main>
+        <footer id="footer" class="w-100 row m-0 p-0 align-items-center justify-content-center">
+            <div class="d-flex flex-column flex-lg-row text-center text-roboto justify-content-evenly align-items-center border-bottom p-0">
+                <a href="#quienesSomos" class="white text-decoration-none me-lg-4">QUIENES SOMOS</a>
+                <a href="#filosofia" class="white text-decoration-none mx-lg-4">FILOSOFÍA</a>
+                <a href="#servicios" class="white text-decoration-none mx-lg-4">SERVICIOS</a>
+                <a href="#equipo" class="white text-decoration-none mx-lg-4">EQUIPO PROFESIONAL</a>
+                <a href="#contacto" class="white text-decoration-none ms-lg-4 me-lg-5">CONTACTO</a>
+                <a href="index.html" class="ms-lg-5"><img class="logo-footer" src="images/iso negativo.svg" alt="logo JC" width="160"></a>
+            </div>
+
+        </footer>
+        <!-- Scripts -->
+        <script src="scripts.js"></script>
+        <script src="Animate/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script> 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     </body>
 </html>
