@@ -311,13 +311,13 @@ ul {
 
 @-webkit-keyframes textos-filo2 {
   to {
-    right: 4%;
+    right: 15%;
   }
 }
 
 @keyframes textos-filo2 {
   to {
-    right: 4%;
+    right: 15%;
   }
 }
 
@@ -514,14 +514,14 @@ ul {
 
 .texto-equipo1 {
   bottom: 25%;
-  left: -100%;
+  left: -10%;
   -webkit-animation: textos-equipo1 0.5s ease-in-out calc(var(--scroll) * -0.5s) forwards paused;
           animation: textos-equipo1 0.5s ease-in-out calc(var(--scroll) * -0.5s) forwards paused;
 }
 
 .texto-equipo2 {
   bottom: 20%;
-  right: -100%;
+  right: -10%;
   -webkit-animation: textos-equipo2 0.5s ease-in-out calc(var(--scroll) * -0.5s) forwards paused;
           animation: textos-equipo2 0.5s ease-in-out calc(var(--scroll) * -0.5s) forwards paused;
 }

@@ -277,7 +277,7 @@ ul {
 
 @keyframes textos-filo2 {
     to {
-        right: 4%;
+        right: 15%;
     }
 }
 
@@ -457,12 +457,12 @@ ul {
 
 .texto-equipo1 {
     bottom: 25%;
-    left: -100%;
+    left: -10%;
     animation: textos-equipo1 .5s ease-in-out calc(var(--scroll) * -0.5s) forwards paused;
 }
 .texto-equipo2 {
     bottom: 20%;
-    right: -100%;
+    right: -10%;
     animation: textos-equipo2 .5s ease-in-out calc(var(--scroll) * -0.5s) forwards paused;
 }
 
