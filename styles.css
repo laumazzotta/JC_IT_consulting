@@ -345,8 +345,8 @@ ul {
 
 .planeamiento, .direccion, .reporting, .procesosIT, .staffing {
   height: 50vh;
-  -webkit-transition: all 1s ease-in-out 0s;
-  transition: all 1s ease-in-out 0s;
+  -webkit-transition: all .5s ease-in-out 0s;
+  transition: all .5s ease-in-out 0s;
   opacity: 1;
   visibility: visible;
 }
@@ -430,8 +430,8 @@ ul {
           transform: translateX(100%);
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
   background-color: #C4C4C4;
 }
 
@@ -486,9 +486,13 @@ ul {
           transform: translateX(-100%);
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
   background-color: #C4C4C4;
+}
+
+.titulo-overlay {
+  line-height: 1;
 }
 
 #equipo {
@@ -740,6 +744,7 @@ a:hover {
   }
   .titulos-servicios {
     font-size: 3rem;
+    line-height: .9;
   }
   .planeamiento, .direccion, .reporting, .procesosIT, .staffing {
     height: 80vh;
@@ -863,6 +868,16 @@ a:hover {
   }
   .texto-equipo2 {
     bottom: 20%;
+  }
+  .planeamiento, .direccion, .reporting, .procesosIT, .staffing {
+    height: 100vh;
+  }
+  .overlay,
+  .overlay-2,
+  .overlay-3,
+  .overlay-4,
+  .overlay-5 {
+    height: 100vh;
   }
 }
 
