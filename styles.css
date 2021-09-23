@@ -430,19 +430,6 @@ ul {
   width: 80px;
 }
 
-.planeamiento > div > .open-btn > svg,
-.reporting > div > .open-btn > svg,
-.staffing > div > .open-btn > svg {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-.direccion > div > .open-btn > svg,
-.procesosIT > div > .open-btn > svg {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
 .planeamiento > div > h4
 .reporting > div > h4,
 .reporting > div > h4 {
@@ -463,7 +450,7 @@ ul {
 
 .open-btn,
 .open-btn > p,
-.open-btn > svg > g > path {
+.open-btn > i {
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
@@ -475,15 +462,15 @@ ul {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.open-btn:hover > svg > g > path,
-.close-btn:hover > svg > g > path {
+.open-btn:hover > i,
+.close-btn:hover > i {
   fill: #c25303;
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 
 .open-btn > p,
-.open-btn > svg > g > path {
+.open-btn > i {
   -webkit-transition: all .3s ease-in-out 0s;
   transition: all .3s ease-in-out 0s;
 }
@@ -528,20 +515,6 @@ ul {
 }
 
 .close-btn {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  cursor: pointer;
-}
-
-.close-btn > svg {
-  width: 41;
-  height: 41;
-}
-
-.overlay-2 > .close-btn,
-.overlay-4 > .close-btn {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
   cursor: pointer;
 }
 

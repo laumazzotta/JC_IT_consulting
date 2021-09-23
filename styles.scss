@@ -367,16 +367,16 @@ ul {
     width: 80px;
 }
 
-.planeamiento > div > .open-btn > svg, 
-.reporting > div > .open-btn > svg,
-.staffing > div > .open-btn > svg {
-    transform: rotate(-90deg);
-}
+// .planeamiento > div > .open-btn > i, 
+// .reporting > div > .open-btn > i,
+// .staffing > div > .open-btn > i {
+//     transform: rotate(-90deg);
+// }
 
-.direccion > div > .open-btn > svg,
-.procesosIT > div > .open-btn > svg {
-    transform: rotate(90deg);
-}
+// .direccion > div > .open-btn > i,
+// .procesosIT > div > .open-btn > i {
+//     transform: rotate(90deg);
+// }
 
 .planeamiento > div > h4 
 .reporting > div > h4,
@@ -395,7 +395,7 @@ ul {
 
 .open-btn, 
 .open-btn > p, 
-.open-btn > svg > g > path {
+.open-btn > i {
     transition: all 0.3s ease-in-out 0s;
 }
 
@@ -405,14 +405,14 @@ ul {
     transition: all 0.3s ease-in-out 0s;
 }
 
-.open-btn:hover > svg > g > path,
-.close-btn:hover > svg > g > path {
+.open-btn:hover > i,
+.close-btn:hover > i {
     fill: rgb(194, 83, 3);
     transition: all 0.3s ease-in-out 0s;
 }
 
 .open-btn > p, 
-.open-btn > svg > g > path {
+.open-btn > i {
     transition: all .3s ease-in-out 0s;
 } 
 
@@ -451,18 +451,6 @@ ul {
 }
 
 .close-btn {
-    transform: rotate(90deg);
-    cursor: pointer;
-}
-
-.close-btn > svg {
-    width: 41;
-    height: 41;
-}
-
-.overlay-2 > .close-btn, 
-.overlay-4 > .close-btn {
-    transform: rotate(-90deg);
     cursor: pointer;
 }
 
