@@ -94,7 +94,7 @@
   font-size: 1rem;
   width: 100%;
   position: fixed;
-  z-index: 100;
+  z-index: 10000;
   background: transparent;
   -webkit-animation: fixedNavbar .1s linear forwards;
           animation: fixedNavbar .1s linear forwards;
@@ -625,28 +625,28 @@ ul {
 
 @-webkit-keyframes textos-equipo1 {
   to {
-    left: 42%;
+    left: 41%;
     opacity: 1;
   }
 }
 
 @keyframes textos-equipo1 {
   to {
-    left: 42%;
+    left: 41%;
     opacity: 1;
   }
 }
 
 @-webkit-keyframes textos-equipo2 {
   to {
-    left: 78%;
+    left: 76%;
     opacity: 1;
   }
 }
 
 @keyframes textos-equipo2 {
   to {
-    left: 78%;
+    left: 76%;
     opacity: 1;
   }
 }

@@ -104,7 +104,7 @@ $theme-colors: (
     font-size: 1rem;
     width: 100%;
     position: fixed;
-    z-index: 100;
+    z-index: 10000;
     background: transparent;
     animation: fixedNavbar .1s linear forwards;
     animation-play-state: paused;
@@ -535,13 +535,13 @@ ul {
 
 @keyframes textos-equipo1 {
     to {
-        left: 42%;
+        left: 41%;
         opacity: 1;
     }
 }
 @keyframes textos-equipo2 {
     to {
-        left: 78%;
+        left: 76%;
         opacity: 1;
     }
 }
