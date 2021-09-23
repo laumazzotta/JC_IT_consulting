@@ -59,6 +59,10 @@ $theme-colors: (
     color: white;
 }
 
+.black {
+    color: black;
+}
+
 .bg-mdgray {
     background-color: $success;
 }
@@ -83,7 +87,39 @@ $theme-colors: (
 
 #main-logo {
     width: 400;
+    animation: navbarBrand .1s linear forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -4s);
+    transition: all .25s;
 }
+
+@keyframes navbarBrand {
+    to {
+        width: 200;
+        // padding-top: 0;
+}}
+
+.navbar {
+    padding: 1.5rem;
+    font-size: 1rem;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background: transparent;
+    animation: fixedNavbar .1s linear forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -4s);
+    transition: all .5s;
+}
+
+@keyframes fixedNavbar {
+    to {
+        background: $info;
+        opacity: .9;
+        font-size: .8rem;
+        // height: 60px;
+        padding: .8rem;
+}}
 
 .nav-link {
     color: $success;
@@ -178,9 +214,17 @@ ul {
     color: $secondary;
 }
 
+.hero-tittle {
+    top: 40%;
+}
+
 .hero-tittle > h5 {
-    text-shadow: 1px 2px 2px #0000009e;
+    // text-shadow: 1px 2px 2px #0000009e;
     line-height: 1.5;
+}
+
+.hero-cta {
+    bottom: 20%;
 }
 
 .hero-cta > a > p {
@@ -206,6 +250,10 @@ ul {
 
 .hero-cta:hover > a > p {
     color: $secondary;
+}
+
+#quienesSomos > div {
+    width: 75%;
 }
 
 .items-qs-first, .items-qs-second, .items-qs-third {
@@ -257,7 +305,7 @@ ul {
 .texto-filosofia1 {
     width: 25%;
     background-color: rgba(255, 255, 255, 0.838);
-    top: 10%;
+    top: 14%;
     left: 100%;
     animation: textos-filo1 .5s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
 }
@@ -281,10 +329,11 @@ ul {
     }
 }
 
-.servicios > h1, .contacto {
+#quienesSomos > h1, .servicios > h1, .contacto {
     font-size: 7rem;   
     padding-top: 3rem;
     letter-spacing: 1rem;
+    text-shadow: 2px 3px 4px #00000026;
 }
 
 .items-servicios {
@@ -304,7 +353,7 @@ ul {
 }
 
 .planeamiento, .direccion, .reporting, .procesosIT, .staffing {
-    height: 50vh;
+    height: 60vh;
     transition: all .5s ease-in-out 0s;
     opacity: 1;
     visibility: visible;
@@ -371,7 +420,7 @@ ul {
 .overlay-3, 
 .overlay-5 {
     // width: 50%;
-    height: 50vh;
+    height: 60vh;
     z-index: 100;
     position: absolute;
     top: 0;
@@ -420,7 +469,7 @@ ul {
 .overlay-2, 
 .overlay-4 {
     // width: 50%;
-    height: 50vh;
+    height: 60vh;
     z-index: 100;
     position: absolute;
     top: 0;
@@ -439,7 +488,7 @@ ul {
 
 #equipo {
     background-image: url(images/bg_equipo.png);
-    height: 120%;
+    height: 130%;
     // background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -453,10 +502,17 @@ ul {
     text-shadow: 2px 3px 10px #00000074;   
 }
 
-.texto-equipo1, .texto-equipo2 {
+.texto-equipo, .texto-equipo1, .texto-equipo2 {
+    position: absolute;
     background-color: rgba(255, 255, 255, 0.838);
     width: 30%;
     opacity: 0;
+}
+
+.texto-equipo {
+    bottom: 28%;
+    left: -20%;
+    animation: textos-equipo .5s ease-in-out calc(var(--scroll) * -0.5s) forwards paused;
 }
 
 .texto-equipo1 {
@@ -466,19 +522,26 @@ ul {
 }
 .texto-equipo2 {
     bottom: 20%;
-    right: -10%;
+    left: 0%;
     animation: textos-equipo2 .5s ease-in-out calc(var(--scroll) * -0.5s) forwards paused;
+}
+
+@keyframes textos-equipo {
+    to {
+        left: 6%;
+        opacity: 1;
+    }
 }
 
 @keyframes textos-equipo1 {
     to {
-        left: 15%;
+        left: 42%;
         opacity: 1;
     }
 }
 @keyframes textos-equipo2 {
     to {
-        right: 15%;
+        left: 78%;
         opacity: 1;
     }
 }
@@ -544,7 +607,14 @@ a:hover {
     
     #main-logo {
         width: 250;
+        animation: none;
+        padding-top: 1.5rem;
     }      
+    
+    .navbar {
+        padding: 0;
+        animation: none;
+    }
 
     .hero-background {
         background: rgb(106,106,106);
@@ -583,11 +653,23 @@ a:hover {
         width: 100vw;
     }
 
-    #quienesSomos { 
-        height: auto !important;
+    .hero-tittle {
+        top: 50%;
     }
 
-    .servicios > h1, .contacto {
+    .hero-cta {
+        bottom: 0;
+    }
+
+    #quienesSomos { 
+        height: unset;
+    }
+
+    #quienesSomos > div {
+        width: 90%;
+    }
+
+    #quienesSomos > h1, .servicios > h1, .contacto {
         font-size: 3rem;   
         padding-top: 3rem;
         letter-spacing: .5rem;
@@ -653,6 +735,7 @@ a:hover {
 
     .card-direccion {
         text-align: center;
+        padding-top: 3rem;
     }
 
     .iconos-servicios {
@@ -712,7 +795,7 @@ a:hover {
 
     .close-btn {
         position: absolute;
-        top: 4%;
+        top: 5%;
         padding: 0;
     }
 
@@ -729,36 +812,26 @@ a:hover {
     
     #equipo {
         background-image: url(images/bg_equipo_mobile.png);
+        height: 140%;
         
     }
-    
-    .texto-equipo1, .texto-equipo2 {
-        font-size: .8rem;
-        width: 75%;
+
+    .texto-equipo, .texto-equipo1, .texto-equipo2 {
+        position: unset;
         opacity: 1;
+        font-size: .9rem;
+        width: 75%;
+        margin: auto;
+        animation: none;
     }
-    
+
+    .texto-equipo {
+        margin-top: 4rem;
+    }
+
     .texto-equipo1 {
-        top: 25%;
-        bottom: unset;
-        left: -100%;
-        animation: textos-equipo1 1s ease-in-out calc(var(--scroll) * -1s) forwards paused;
-    }
-    .texto-equipo2 {
-        bottom: 30%;
-        right: -100%;
-        animation: textos-equipo2 1s ease-in-out calc(var(--scroll) * -1s) forwards paused;
-    }
-    
-    @keyframes textos-equipo1 {
-        to {
-            left: 30%;
-        }
-    }
-    @keyframes textos-equipo2 {
-        to {
-            right: 30%;
-        }
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;   
     }
 
     .contacto {
@@ -795,8 +868,22 @@ a:hover {
         bottom: 15%;
     }
 
-    .texto-equipo2 {
-        bottom: 20%;
+    // #equipo {
+    //     height: 140%;
+    // }
+
+    .texto-equipo, .texto-equipo1, .texto-equipo2 {
+        position: unset;
+        opacity: 1;
+        font-size: .9rem;
+        width: 85%;
+        // margin: auto;
+        animation: none;
+    }
+
+    .texto-equipo1 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;   
     }
 
     .planeamiento, .direccion, .reporting, .procesosIT, .staffing {
@@ -816,6 +903,15 @@ a:hover {
 
 @media only screen and (max-width: 321px) {
 
+    .hero-tittle > h1 {
+        margin-bottom: .8rem !important;
+    }
+
+    .hero-tittle > h5 {
+        line-height: 1.2;
+    }
+    
+    
     #filosofia {
         height: 120%;
     }
@@ -834,8 +930,113 @@ a:hover {
         bottom: 10%;
     }
 
-    .texto-equipo2 {
-        bottom: 15%;
+    #equipo {
+        height: 150%;
     }
 
 }
+
+@media only screen and (min-width: 1400px) {
+    .texto-filosofia1 {
+        top: 20%;
+    }
+
+    .texto-filosofia2 {
+        bottom: 15%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    
+    #main-logo {
+        animation: none;
+    }
+    
+    .navbar {
+        padding: 0;
+        animation: none;
+    }
+    
+    #quienesSomos > h1, #filosofia > h1, .servicios > h1, #equipo > h1, .contacto {
+        font-size: 5rem;
+    }
+
+    .items-qs {
+        width: 80%;
+    }
+
+    #filosofia {
+        height: 100vh;
+    }
+    
+    .texto-filosofia1 {
+        width: 80%;
+        top: 35%;
+        left: 6%;
+    }
+
+    .texto-filosofia2 {
+        width: 80%;
+        right: 3%;
+        bottom: 15%;
+    }
+
+    .titulo-overlay {
+        font-size: 4rem;
+    }
+
+    .overlay > .close-btn,
+    .overlay-3 > .close-btn,
+    .overlay-5 > .close-btn {
+        left: -1%;
+    }
+
+    #equipo {
+        height: 155%;
+    }
+
+    .texto-equipo, .texto-equipo1, .texto-equipo2 {
+        position: unset;
+        opacity: 1;
+        font-size: 1rem;
+        width: 75%;
+        margin: auto;
+        animation: none;
+    }
+
+    .texto-equipo {
+        margin-top: 4rem;
+    }
+
+    .texto-equipo1 {
+        margin-top: 3.5rem;
+        margin-bottom: 3.5rem;
+        
+    }
+
+}
+
+@media (min-width: 993px) and (max-width: 1079px) { 
+    #filosofia > h1 {
+        font-size: 7rem;
+        top: 18%;    
+    }
+
+    .texto-filosofia1 {
+        width: 30%;
+    }
+
+    .texto-filosofia2 {
+        width: 40%;
+        right: -120%;
+    }
+
+    .planeamiento, .direccion, .reporting, .procesosIT, .staffing {
+        height: 70vh;
+    }
+
+    .overlay, .overlay-2, .overlay-3, .overlay-4, .overlay-5 {
+        height: 70vh;
+    }
+}
+
