@@ -240,7 +240,7 @@ ul {
 }
 
 .hero-cta {
-  bottom: 20%;
+  bottom: 10%;
 }
 
 .hero-cta > a > p {
@@ -248,7 +248,8 @@ ul {
   text-decoration: none;
 }
 
-.hero-cta > a > svg {
+.hero-cta > a > i {
+  font-size: 4rem;
   -webkit-animation: hero-cta 1.3s linear infinite alternate forwards;
           animation: hero-cta 1.3s linear infinite alternate forwards;
 }
@@ -267,8 +268,7 @@ ul {
   }
 }
 
-.hero-cta > a > svg,
-.hero-cta > a > svg > g > path,
+.hero-cta > a > i,
 .hero-cta > a > p {
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
@@ -1019,6 +1019,7 @@ a:hover {
   #main-logo {
     -webkit-animation: none;
             animation: none;
+    width: 500;
   }
   .navbar {
     padding: 0;
@@ -1032,7 +1033,7 @@ a:hover {
     width: 80%;
   }
   #filosofia {
-    height: 100vh;
+    height: 80vh;
   }
   .texto-filosofia1 {
     width: 80%;
@@ -1053,7 +1054,7 @@ a:hover {
     left: -1%;
   }
   #equipo {
-    height: 155%;
+    height: 120%;
   }
   .texto-equipo, .texto-equipo1, .texto-equipo2 {
     position: unset;
