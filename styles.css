@@ -1041,4 +1041,16 @@ a:hover {
     height: 70vh;
   }
 }
+
+@media only screen and (min-width: 1080px) {
+  .height-servicios {
+    height: 80vh !important;
+  }
+  .textos-overlay {
+    line-height: 2;
+  }
+  .textos-overlay > li {
+    font-size: 1.1rem !important;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
