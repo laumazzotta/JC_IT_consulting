@@ -350,9 +350,10 @@ ul {
 }
 
 .texto-filosofia1 {
+  position: absolute;
   width: 25%;
   background-color: rgba(255, 255, 255, 0.838);
-  top: 14%;
+  top: 13%;
   left: 100%;
   -webkit-animation: textos-filo1 0.5s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
           animation: textos-filo1 0.5s ease-in-out calc(var(--scroll) * -1.5s) forwards paused;
@@ -371,8 +372,9 @@ ul {
 }
 
 .texto-filosofia2 {
+  position: absolute;
   background-color: rgba(255, 255, 255, 0.838);
-  bottom: 10%;
+  bottom: 8%;
   right: -50%;
   width: 30%;
   -webkit-animation: textos-filo2 0.5s ease-in-out calc(var(--scroll) * -1.6s) forwards paused;
@@ -392,7 +394,7 @@ ul {
 }
 
 #quienesSomos > h1, .servicios > h1, .contacto {
-  font-size: 7rem;
+  font-size: 5rem;
   padding-top: 3rem;
   letter-spacing: 1rem;
   text-shadow: 2px 3px 4px #00000026;
@@ -783,41 +785,13 @@ a:hover {
     text-shadow: 2px 3px 10px #00000074;
     letter-spacing: .5rem;
   }
-  .texto-filosofia1 {
+  .texto-filosofia1, .texto-filosofia2 {
+    position: unset;
+    margin: 3rem auto;
     width: 75%;
     background-color: rgba(255, 255, 255, 0.838);
-    top: 25%;
-    left: 10%;
-    -webkit-animation: textos-filo1 1s ease-in-out calc(var(--scroll) * -1.2s) forwards paused;
-            animation: textos-filo1 1s ease-in-out calc(var(--scroll) * -1.2s) forwards paused;
-  }
-  @-webkit-keyframes textos-filo1 {
-    to {
-      left: 40%;
-    }
-  }
-  @keyframes textos-filo1 {
-    to {
-      left: 40%;
-    }
-  }
-  .texto-filosofia2 {
-    background-color: rgba(255, 255, 255, 0.838);
-    bottom: 10%;
-    right: 10%;
-    width: 75%;
-    -webkit-animation: textos-filo2 1s ease-in-out calc(var(--scroll) * -1.2s) forwards paused;
-            animation: textos-filo2 1s ease-in-out calc(var(--scroll) * -1.2s) forwards paused;
-  }
-  @-webkit-keyframes textos-filo2 {
-    to {
-      right: 40%;
-    }
-  }
-  @keyframes textos-filo2 {
-    to {
-      right: 40%;
-    }
+    -webkit-animation: none;
+            animation: none;
   }
   .card-direccion {
     text-align: center;
@@ -923,11 +897,12 @@ a:hover {
 @media only screen and (max-width: 400px) {
   .texto-filosofia1 {
     font-size: .8rem;
-    top: 30%;
   }
   .texto-filosofia2 {
     font-size: .8rem;
-    bottom: 15%;
+  }
+  #equipo {
+    height: 160%;
   }
   .texto-equipo, .texto-equipo1, .texto-equipo2 {
     position: unset;
@@ -961,7 +936,7 @@ a:hover {
     line-height: 1.2;
   }
   #filosofia {
-    height: 120%;
+    height: 140%;
   }
   #filosofia > h1,
   .servicios > h1, .contacto {
@@ -975,7 +950,7 @@ a:hover {
     bottom: 10%;
   }
   #equipo {
-    height: 150%;
+    height: 190%;
   }
 }
 
@@ -1027,7 +1002,7 @@ a:hover {
     left: -1%;
   }
   #equipo {
-    height: 120%;
+    height: 140%;
   }
   .texto-equipo, .texto-equipo1, .texto-equipo2 {
     position: unset;
