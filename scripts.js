@@ -14,6 +14,7 @@ jQuery(function($) {
     //     document.body.style.setProperty('--scroll', scroll);
     //   }, false);
 
+    
     $('#openNav').on('click', function() {
         $('#myNav').css("height", "100%");
     });
@@ -31,15 +32,15 @@ jQuery(function($) {
         $('.planeamiento').addClass("planeamiento-open").addClass("height-servicios");
         $('.overlay').addClass("overlay-open").addClass("height-servicios");
     });
-    $('#submenu-planeamiento').on('click', function() {
-        $('.planeamiento').addClass("planeamiento-open").addClass("height-servicios");
-        $('.overlay').addClass("overlay-open").addClass("height-servicios");
-    });
+    // $('#submenu-planeamiento').on('click', function() {
+    //     $('.planeamiento').addClass("planeamiento-open").addClass("height-servicios");
+    //     $('.overlay').addClass("overlay-open").addClass("height-servicios");
+    // });
 
-    $('#submenu-planeamiento-mob').on('click', function() {
-        $('.planeamiento').addClass("planeamiento-open");
-        $('.overlay').addClass("overlay-open");
-    });
+    // $('#submenu-planeamiento-mob').on('click', function() {
+    //     $('.planeamiento').addClass("planeamiento-open");
+    //     $('.overlay').addClass("overlay-open");
+    // });
     
     $('#close-btn-1').on('click', function() {
         $('.planeamiento').removeClass("planeamiento-open").removeClass("height-servicios");
@@ -51,14 +52,14 @@ jQuery(function($) {
         $('.direccion').addClass("direccion-open").addClass("height-servicios");
         $('.overlay-2').addClass("overlay-open").addClass("height-servicios");
     });
-    $('#submenu-direccion').on('click', function() {
-        $('.direccion').addClass("direccion-open").addClass("height-servicios");
-        $('.overlay-2').addClass("overlay-open").addClass("height-servicios");
-    });
-    $('#submenu-direccion-mob').on('click', function() {
-        $('.direccion').addClass("direccion-open");
-        $('.overlay-2').addClass("overlay-open");
-    });
+    // $('#submenu-direccion').on('click', function() {
+    //     $('.direccion').addClass("direccion-open").addClass("height-servicios");
+    //     $('.overlay-2').addClass("overlay-open").addClass("height-servicios");
+    // });
+    // $('#submenu-direccion-mob').on('click', function() {
+    //     $('.direccion').addClass("direccion-open");
+    //     $('.overlay-2').addClass("overlay-open");
+    // });
     
     $('#close-btn-2').on('click', function() {
         $('.direccion').removeClass("direccion-open").removeClass("height-servicios");
@@ -70,14 +71,14 @@ jQuery(function($) {
         $('.reporting').addClass("planeamiento-open").addClass("height-servicios");
         $('.overlay-3').addClass("overlay-open").addClass("height-servicios");
     });
-    $('#submenu-reporting').on('click', function() {
-        $('.reporting').addClass("planeamiento-open").addClass("height-servicios");
-        $('.overlay-3').addClass("overlay-open").addClass("height-servicios");
-    });
-    $('#submenu-reporting-mob').on('click', function() {
-        $('.reporting').addClass("planeamiento-open");
-        $('.overlay-3').addClass("overlay-open");
-    });
+    // $('#submenu-reporting').on('click', function() {
+    //     $('.reporting').addClass("planeamiento-open").addClass("height-servicios");
+    //     $('.overlay-3').addClass("overlay-open").addClass("height-servicios");
+    // });
+    // $('#submenu-reporting-mob').on('click', function() {
+    //     $('.reporting').addClass("planeamiento-open");
+    //     $('.overlay-3').addClass("overlay-open");
+    // });
     
     $('#close-btn-3').on('click', function() {
         $('.reporting').removeClass("planeamiento-open").removeClass("height-servicios");
@@ -89,14 +90,14 @@ jQuery(function($) {
         $('.procesosIT').addClass("direccion-open").addClass("height-servicios");
         $('.overlay-4').addClass("overlay-open").addClass("height-servicios");
     });
-    $('#submenu-procesos').on('click', function() {
-        $('.procesosIT').addClass("direccion-open").addClass("height-servicios");
-        $('.overlay-4').addClass("overlay-open").addClass("height-servicios");
-    });
-    $('#submenu-procesos-mob').on('click', function() {
-        $('.procesosIT').addClass("direccion-open");
-        $('.overlay-4').addClass("overlay-open");
-    });
+    // $('#submenu-procesos').on('click', function() {
+    //     $('.procesosIT').addClass("direccion-open").addClass("height-servicios");
+    //     $('.overlay-4').addClass("overlay-open").addClass("height-servicios");
+    // });
+    // $('#submenu-procesos-mob').on('click', function() {
+    //     $('.procesosIT').addClass("direccion-open");
+    //     $('.overlay-4').addClass("overlay-open");
+    // });
     
     $('#close-btn-4').on('click', function() {
         $('.procesosIT').removeClass("direccion-open").removeClass("height-servicios");
@@ -108,14 +109,14 @@ jQuery(function($) {
         $('.staffing').addClass("planeamiento-open").addClass("height-servicios");
         $('.overlay-5').addClass("overlay-open").addClass("height-servicios");
     });
-    $('#submenu-staffing').on('click', function() {
-        $('.staffing').addClass("planeamiento-open").addClass("height-servicios");
-        $('.overlay-5').addClass("overlay-open").addClass("height-servicios");
-    });
-    $('#submenu-staffing-mob').on('click', function() {
-        $('.staffing').addClass("planeamiento-open");
-        $('.overlay-5').addClass("overlay-open");
-    });
+    // $('#submenu-staffing').on('click', function() {
+    //     $('.staffing').addClass("planeamiento-open").addClass("height-servicios");
+    //     $('.overlay-5').addClass("overlay-open").addClass("height-servicios");
+    // });
+    // $('#submenu-staffing-mob').on('click', function() {
+    //     $('.staffing').addClass("planeamiento-open");
+    //     $('.overlay-5').addClass("overlay-open");
+    // });
     
     $('#close-btn-5').on('click', function() {
         $('.staffing').removeClass("planeamiento-open").removeClass("height-servicios");
